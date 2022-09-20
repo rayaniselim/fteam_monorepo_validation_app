@@ -1,0 +1,68 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "core_module",
+            "cwd": "core_module",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "core_module (profile mode)",
+            "cwd": "core_module",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "core_module (release mode)",
+            "cwd": "core_module",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "fteam_login_app",
+            "cwd": "fteam_login_app",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "fteam_login_app (profile mode)",
+            "cwd": "fteam_login_app",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "fteam_login_app (release mode)",
+            "cwd": "fteam_login_app",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "monorepo_design_system",
+            "cwd": "monorepo_design_system",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "monorepo_design_system (profile mode)",
+            "cwd": "monorepo_design_system",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "monorepo_design_system (release mode)",
+            "cwd": "monorepo_design_system",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

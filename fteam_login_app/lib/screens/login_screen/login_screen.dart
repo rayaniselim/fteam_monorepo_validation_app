@@ -1,4 +1,3 @@
-import 'package:core_module/core_module.dart';
 import 'package:flutter/material.dart';
 import 'package:monorepo_design_system/monorepo_design_system.dart';
 import 'components/forgot_my_password_components.dart';
@@ -76,29 +75,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     const Padding(
                       padding: EdgeInsets.all(5),
                     ),
-                    CustomTextFormFieldComponents(
+                    TextFormFieldPassword(
                       label: 'Password',
                       hintText: '  Password',
-                      textInputAction: TextInputAction.next,
-                      icon: Icons.lock_outline,
-                      suffixIcon: isPasswordObscure == true
-                          ? const Icon(
-                              Icons.visibility_off_outlined,
-                              color: AppColors.colorsIconGrey,
-                              size: 24,
-                            )
-                          : const Icon(
-                              Icons.visibility_outlined,
-                              color: AppColors.colorsIconGrey,
-                              size: 24,
-                            ),
-                      onTapSuffixIcon: () {
-                        setState(() {
-                          isPasswordObscure = !isPasswordObscure;
-                        });
-                      },
                       onChanged: (value) => _password = value,
-                      obscureText: isPasswordObscure,
                       validator: (value) {
                         if (value == null || value.trim().isEmpty) {
                           return 'This field is required';
@@ -120,22 +100,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     InkWell(
                       onTap: () {
                         _trySubmitForm();
-                        // Navigator.pushNamed(context, '/profile');
                       },
-                      child: Container(
-                        width: 330,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          color: AppColors.primaryColor,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        alignment: Alignment.center,
-                        child: Text(
-                          'Sign Up ',
-                          style: AppFontSize.appFontSizeTextButton.copyWith(
-                            color: AppColors.colorsTextWhite,
-                          ),
-                        ),
+                      child: const BottomComponents(
+                        textTitle: 'Sign Up',
                       ),
                     ),
                     const SizedBox(height: 10),

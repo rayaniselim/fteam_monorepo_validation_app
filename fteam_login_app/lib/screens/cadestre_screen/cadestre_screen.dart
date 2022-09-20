@@ -1,4 +1,3 @@
-import 'package:core_module/core_module.dart';
 import 'package:flutter/material.dart';
 import 'package:monorepo_design_system/monorepo_design_system.dart';
 import 'components/text_header_cadastre_components.dart';
@@ -17,8 +16,6 @@ class _CadestreScreenState extends State<CadestreScreen> {
   String _userName = '';
   String _password = '';
   String _confirmPassword = '';
-  bool isPasswordObscure = true;
-  bool isConfirmPasswordObscure = true;
 
 // void nao retorna nada
 
@@ -60,7 +57,7 @@ class _CadestreScreenState extends State<CadestreScreen> {
           children: [
             const TextHeaderCadestreComponents(),
             Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),
@@ -91,21 +88,13 @@ class _CadestreScreenState extends State<CadestreScreen> {
                             icon: Icons.person_outline,
                             onChanged: (value) => _userName = value,
                             validator: (value) {
-                              if (value == null || value.trim().isEmpty) {
-                                return 'This field is required';
+                              if (value!.isEmpty ||
+                                  !RegExp('[a-z A-Z]').hasMatch(value)) {
+                                return 'Enter correct name';
+                              } else {
+                                return null;
                               }
-                              if (value.trim().length < 6) {
-                                return 'Username must be at least 6 characters in length';
-                              }
-                              return null;
                             },
-                            //   if (value!.isEmpty ||
-                            //       !RegExp(r'ˆ[a-z A-Z]+$').hasMatch(value)) {
-                            //     return 'Enter correct name';
-                            //   } else {
-                            //     return null;
-                            //   }
-                            // }, /// VER QUAL O LIMITE DE PALAVRAS DELE PQ NAO FUNCIONA
                           ),
                           const Padding(
                             padding: EdgeInsets.all(5),
@@ -131,29 +120,10 @@ class _CadestreScreenState extends State<CadestreScreen> {
                           const Padding(
                             padding: EdgeInsets.all(5),
                           ),
-                          CustomTextFormFieldComponents(
+                          TextFormFieldPassword(
                             label: 'Password',
                             hintText: '  Password',
-                            textInputAction: TextInputAction.next,
-                            icon: Icons.lock_outline,
-                            suffixIcon: isPasswordObscure == true
-                                ? const Icon(
-                                    Icons.visibility_off_outlined,
-                                    color: AppColors.colorsIconGrey,
-                                    size: 24,
-                                  )
-                                : const Icon(
-                                    Icons.visibility_outlined,
-                                    color: AppColors.colorsIconGrey,
-                                    size: 24,
-                                  ),
-                            onTapSuffixIcon: () {
-                              setState(() {
-                                isPasswordObscure = !isPasswordObscure;
-                              });
-                            },
                             onChanged: (value) => _password = value,
-                            obscureText: isPasswordObscure,
                             validator: (value) {
                               if (value == null || value.trim().isEmpty) {
                                 return 'This field is required';
@@ -167,61 +137,29 @@ class _CadestreScreenState extends State<CadestreScreen> {
                           const Padding(
                             padding: EdgeInsets.all(5),
                           ),
-                          CustomTextFormFieldComponents(
+                          TextFormFieldPassword(
                             label: 'Confirm Password',
                             hintText: '  Confirm Password',
-                            textInputAction: TextInputAction.done,
-                            icon: Icons.lock_outline,
-                            obscureText: isConfirmPasswordObscure,
                             onChanged: (value) => _confirmPassword = value,
-                            suffixIcon: isConfirmPasswordObscure == true
-                                ? const Icon(
-                                    Icons.visibility_off_outlined,
-                                    color: AppColors.colorsIconGrey,
-                                    size: 24,
-                                  )
-                                : const Icon(
-                                    Icons.visibility_outlined,
-                                    color: AppColors.colorsIconGrey,
-                                    size: 24,
-                                  ),
-                            onTapSuffixIcon: () {
-                              setState(() {
-                                isConfirmPasswordObscure =
-                                    !isConfirmPasswordObscure;
-                              });
-                            },
                             validator: (value) {
                               if (value == null || value.isEmpty) {
                                 return 'This field is required';
                               }
-
                               if (value != _password) {
                                 return 'Confimation password does not match the entered password';
                               }
                               return null;
                             },
                           ),
-                          const SizedBox(height: 50),
+                          const SizedBox(
+                            height: 40,
+                          ),
                           InkWell(
                             onTap: () {
                               _trySubmitForm();
                             },
-                            child: Container(
-                              width: 255,
-                              height: 60,
-                              decoration: BoxDecoration(
-                                color: AppColors.primaryColor,
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              alignment: Alignment.center,
-                              child: Text(
-                                'Sign Up ',
-                                style:
-                                    AppFontSize.appFontSizeTextButton.copyWith(
-                                  color: AppColors.colorsTextWhite,
-                                ),
-                              ),
+                            child: const BottomComponents(
+                              textTitle: 'Sign Up',
                             ),
                           ),
                           const SizedBox(

@@ -1,4 +1,3 @@
-import 'package:core_module/core_module.dart';
 import 'package:flutter/material.dart';
 import 'package:fteam_firebase_login_app/screens/profile_settings_screen/components/image_profile_components.dart';
 import 'package:monorepo_design_system/monorepo_design_system.dart';
@@ -37,7 +36,6 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
       backgroundColor: AppColors.colorsBackgroundWhite,
       resizeToAvoidBottomInset: true,
       appBar: AppBar(
-        backgroundColor: AppColors.colorsBackgroundGrey,
         elevation: 0,
         leading: InkWell(
           onTap: () {
@@ -88,21 +86,13 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
                             icon: Icons.person_outline,
                             onChanged: (value) => _userName = value,
                             validator: (value) {
-                              if (value == null || value.trim().isEmpty) {
-                                return 'This field is required';
+                              if (value!.isEmpty ||
+                                  !RegExp('[a-z A-Z]').hasMatch(value)) {
+                                return 'Enter correct name';
+                              } else {
+                                return null;
                               }
-                              if (value.trim().length < 4) {
-                                return 'Username must be at least 4 characters in length';
-                              }
-                              return null;
                             },
-                            //   if (value!.isEmpty ||
-                            // !RegExp(r'ˆ[a-z A-Z]+$').hasMatch(value)) {
-                            //     return 'Enter correct name';
-                            //   } else {
-                            //     return null;
-                            //   }
-                            // },
                           ),
                           const Padding(
                             padding: EdgeInsets.all(5),
@@ -116,7 +106,7 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
                             onChanged: (value) => _userEmail = value,
                             validator: (value) {
                               if (value!.isEmpty ||
-                                  !RegExp("[0-9]{3}[\.][0-9]{3}[\.][0-9]{3}[\-][0-9]{2}")
+                                  !RegExp("[0-9]{3}[.]\\?[0-9]{3}[.]\\?[0-9]{3}[-]\\?[0-9]{2}")
                                       .hasMatch(value)) {
                                 return 'Enter correct cpf';
                               } else {
@@ -147,17 +137,21 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
                           const Padding(
                             padding: EdgeInsets.all(5),
                           ),
+
+                          /// TODO: dropdown country
                           CustomTextFormFieldComponents(
                             label: 'Country',
                             hintText: '  Country',
                             textInputAction: TextInputAction.done,
                             icon: Icons.edit_location_outlined,
                             onChanged: (value) => _confirmCountry = value,
-                            suffixIcon: const Icon(
-                              Icons.keyboard_arrow_down_outlined,
-                              color: AppColors.primaryColor,
-                              size: 24,
-                            ),
+
+                            /// TODO: ARRUMAR
+                            // suffixIcon: const Icon(
+                            //   Icons.keyboard_arrow_down_outlined,
+                            //   color: AppColors.primaryColor,
+                            //   size: 24,
+                            // ),
                             validator: (value) {
                               if (value == null || value.isEmpty) {
                                 return 'This field is required';
@@ -166,29 +160,18 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
                             },
                           ),
                           const SizedBox(
-                            height: 50,
+                            height: 40,
                           ),
-                          Container(
-                            width: 330,
-                            height: 60,
-                            decoration: BoxDecoration(
-                              color: AppColors.primaryColor,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            alignment: Alignment.center,
-                            child: TextButton(
-                              onPressed: () {
-                                _trySubmitForm();
-                              },
-                              child: Text(
-                                'Confirm ',
-                                style:
-                                    AppFontSize.appFontSizeTextButton.copyWith(
-                                  color: AppColors.colorsTextWhite,
-                                ),
-                              ),
+
+                          InkWell(
+                            onTap: () {
+                              _trySubmitForm();
+                            },
+                            child: const BottomComponents(
+                              textTitle: 'Confirm',
                             ),
                           ),
+
                           const SizedBox(
                             height: 30,
                           ),

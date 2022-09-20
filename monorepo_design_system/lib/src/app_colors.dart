@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 
 class AppColors {
 // static - nao precisa instanciar
-  static const Color primaryColor = Color(0xFF9575CD);
+  static const Color primaryColor = Color(0xFF918ae2);
 
-  static const Color colorsTextBold = Colors.black;
-  static const Color colorsTextGreyHeader = Color.fromRGBO(158, 158, 158, 1);
-  static const Color colorsTextLogin = Color.fromRGBO(97, 97, 97, 1);
-  static const Color colorsTextWhite = Colors.white;
-  static const Color colorsTextFormField = Colors.grey;
+  static const Color colorsTextBold = Color(0xFF5f5e5f);
+  static const Color colorsTextGreyHeader = Color(0xFFc5c5c5);
+  static const Color colorsTextLogin = Color(0xFFa1a1a1);
+  static const Color colorsTextWhite = Color(0xFFfafafa);
+  static const Color colorsTextFormField = Color(0xFF9e9e9e);
 
-  static const Color colorsIconAppBar = Color.fromRGBO(97, 97, 97, 1);
-  static const Color colorsIconGrey = Color.fromRGBO(189, 189, 189, 1);
+  static const Color colorsIconAppBar = Color(0xFF646465);
+  static const Color colorsIconGrey = Color(0xFFcccccc);
 
-  static const Color colorsBackgroundGrey = Color.fromRGBO(245, 245, 245, 1);
-  static const Color colorsBackgroundWhite = Colors.white;
+  static const Color colorsBackgroundGrey = Color(0xFFfafafa);
+  static const Color colorsBackgroundWhite = Color(0xFFffffff);
 
-  static const Color colorsAppBar = Colors.white;
+  static const Color colorsAppBar = Color(0xFFfafafa);
   static const Color colorsError = Colors.red;
 }

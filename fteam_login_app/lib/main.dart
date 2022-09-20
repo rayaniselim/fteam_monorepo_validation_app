@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fteam_firebase_login_app/screens/login_screen/login_screen.dart';
 import 'package:fteam_firebase_login_app/screens/profile_settings_screen/profile_settings_screen.dart';
 import 'package:fteam_firebase_login_app/screens/screen_finish/screen_finish.dart';
+import 'package:monorepo_design_system/monorepo_design_system.dart';
 import 'screens/cadestre_screen/cadestre_screen.dart';
 
 void main() {
@@ -15,9 +16,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-        ),
+        theme: AppTheme.themeLight,
+        darkTheme: AppTheme.themeDark,
+        themeMode: ThemeMode.light,
         initialRoute: '/login',
         onGenerateRoute: (settings) {
           switch (settings.name) {

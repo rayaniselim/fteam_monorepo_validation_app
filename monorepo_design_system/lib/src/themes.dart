@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:monorepo_design_system/monorepo_design_system.dart';
 
-// final themeLight = ThemeData(primaryColor: const Color(0xFF9575CD));
-final themeLight = ThemeData(primaryColor: Colors.amber);
+class AppTheme {
+  static final themeLight = ThemeData(
+    primaryColor: AppColors.primaryColor,
+    scaffoldBackgroundColor: AppColors.colorsBackgroundWhite,
+    appBarTheme: const AppBarTheme(
+      backgroundColor: AppColors.colorsBackgroundGrey,
+      iconTheme: IconThemeData(color: AppColors.colorsIconAppBar),
+    ),
+    visualDensity: VisualDensity.adaptivePlatformDensity,
+    // iconTheme: IconThemeData(color: AppColors.colorsIconGrey), // TODO: NAO ESTA SENDO UTILIZADO
+  );
 
-final themeDark = ThemeData(
-    primaryColor: const Color(0xFF9575CD), brightness: Brightness.dark);
+  static final themeDark = ThemeData(
+      primaryColor: const Color(0xFF9575CD), brightness: Brightness.dark);
+}
