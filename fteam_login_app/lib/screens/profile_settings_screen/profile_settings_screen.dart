@@ -127,33 +127,20 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
                             },
                           ),
                           const Padding(
-                            padding: EdgeInsets.all(10),
-                          ),
-
-                          /// TODO: dropdown country
-
-                          Container(
-                            // height: 30,
-                            width: 310,
-                            child: Text(
-                              'Country',
-                              textAlign: TextAlign.start,
-                              style: AppFontSize.appFontSizeTextLabel.copyWith(
-                                fontWeight: FontWeight.w600,
-                                color: AppColors.colorsTextLabel,
-                              ),
-                            ),
+                            padding: EdgeInsets.all(5),
                           ),
                           const Padding(
-                            padding: EdgeInsets.all(10),
+                            padding: EdgeInsets.only(
+                              left: 4,
+                              right: 4,
+                              top: 0,
+                              bottom: 0,
+                            ),
+                            child: CountriesDropdownComponent(),
                           ),
-
-                          const CountriesDropdownComponent(),
-
                           const SizedBox(
                             height: 40,
                           ),
-
                           InkWell(
                             onTap: () {
                               _trySubmitForm();
@@ -162,7 +149,6 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
                               textTitle: 'Confirm',
                             ),
                           ),
-
                           const SizedBox(
                             height: 30,
                           ),
