@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:monorepo_design_system/monorepo_design_system.dart';
-import 'components/forgot_my_password_components.dart';
-import 'components/text_button_create_components.dart';
+import 'components/forgot_my_password_component.dart';
+import 'components/text_button_create_component.dart';
+
+final formKey = GlobalKey<FormState>();
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -11,15 +13,13 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  final _formKey = GlobalKey<FormState>();
-
   String _userEmail = '';
   String _password = '';
 
   bool isPasswordObscure = true;
 
   void _trySubmitForm() {
-    final bool? isValid = _formKey.currentState?.validate();
+    final bool? isValid = formKey.currentState?.validate();
     if (isValid == true) {
       debugPrint('Everything looks good!');
       debugPrint(_userEmail);
@@ -47,20 +47,23 @@ class _LoginScreenState extends State<LoginScreen> {
                 bottom: 0,
               ),
               child: Form(
-                key: _formKey,
+                key: formKey,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     const Padding(
                       padding: EdgeInsets.all(5),
                     ),
-                    CustomTextFormFieldComponents(
+                    CustomTextFormFieldComponent(
                       label: 'Email',
                       hintText: '  Email',
                       textInputAction: TextInputAction.next,
                       keyboardType: TextInputType.emailAddress,
                       icon: Icons.email_outlined,
-                      onChanged: (value) => _userEmail = value,
+                      onChanged: (value) {
+                        formKey.currentState?.validate();
+                        _userEmail = value;
+                      },
                       validator: (value) {
                         if (value == null || value.trim().isEmpty) {
                           return 'Please enter your email address';
@@ -94,19 +97,19 @@ class _LoginScreenState extends State<LoginScreen> {
                       padding: EdgeInsets.only(
                         left: 0,
                       ),
-                      child: ForgotMyPasswordComponents(),
+                      child: ForgotMyPasswordComponent(),
                     ),
                     const SizedBox(height: 40),
                     InkWell(
                       onTap: () {
                         _trySubmitForm();
                       },
-                      child: const BottomComponents(
+                      child: const BottomComponent(
                         textTitle: 'Sign Up',
                       ),
                     ),
                     const SizedBox(height: 10),
-                    const TextButtonCreateComponents(),
+                    const TextButtonCreateComponent(),
                   ],
                 ),
               ),

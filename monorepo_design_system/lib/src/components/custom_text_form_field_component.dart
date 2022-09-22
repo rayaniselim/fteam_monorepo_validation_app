@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:monorepo_design_system/monorepo_design_system.dart';
 
-class CustomTextFormFieldComponents extends StatefulWidget {
+class CustomTextFormFieldComponent extends StatefulWidget {
   final Icon? prefixIcon;
   final IconData? icon;
   final TextInputAction? textInputAction;
@@ -19,7 +19,7 @@ class CustomTextFormFieldComponents extends StatefulWidget {
   final String label;
   final String hintText;
 
-  const CustomTextFormFieldComponents({
+  const CustomTextFormFieldComponent({
     super.key,
     this.prefixIcon,
     this.icon,
@@ -39,12 +39,12 @@ class CustomTextFormFieldComponents extends StatefulWidget {
   });
 
   @override
-  State<CustomTextFormFieldComponents> createState() =>
-      _CustomTextFormFieldComponentsState();
+  State<CustomTextFormFieldComponent> createState() =>
+      _CustomTextFormFieldComponentState();
 }
 
-class _CustomTextFormFieldComponentsState
-    extends State<CustomTextFormFieldComponents> {
+class _CustomTextFormFieldComponentState
+    extends State<CustomTextFormFieldComponent> {
   bool focused = false;
 
   @override
@@ -66,16 +66,17 @@ class _CustomTextFormFieldComponentsState
             ),
             TextFormField(
               textCapitalization: TextCapitalization.words, // letra maiuscula
-              cursorColor: AppColors.colorsTextFormField,
+              cursorColor: AppColors.colorsHintText,
               style: AppFontSize.appFontSizeTextHint.copyWith(
                 fontWeight: FontWeight.normal,
-                color: AppColors.colorsTextFormField,
+                color: AppColors.colorsHintText,
               ),
               keyboardType: TextInputType.name,
-
               autocorrect: false,
               validator: (value) => widget.validator!(value!),
-              onChanged: (value) => widget.onChanged(value),
+              onChanged: (value) {
+                widget.onChanged(value);
+              },
               textInputAction: widget.textInputAction,
               maxLines: 1,
               decoration: InputDecoration(
@@ -94,7 +95,7 @@ class _CustomTextFormFieldComponentsState
                 hintText: widget.hintText,
                 hintStyle: AppFontSize.appFontSizeTextHint.copyWith(
                   fontWeight: FontWeight.normal,
-                  color: AppColors.colorsTextFormField,
+                  color: AppColors.colorsHintText,
                 ),
                 enabledBorder: const OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10.0)),

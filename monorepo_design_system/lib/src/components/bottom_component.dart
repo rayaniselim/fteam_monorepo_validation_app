@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:monorepo_design_system/monorepo_design_system.dart';
 
-class BottomComponents extends StatelessWidget {
+class BottomComponent extends StatelessWidget {
   final String textTitle;
-  const BottomComponents({
+  const BottomComponent({
     super.key,
     required this.textTitle,
   });

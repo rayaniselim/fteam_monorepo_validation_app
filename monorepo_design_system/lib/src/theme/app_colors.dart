@@ -8,7 +8,8 @@ class AppColors {
   static const Color colorsTextGreyHeader = Color(0xFFc5c5c5);
   static const Color colorsTextLogin = Color(0xFFa1a1a1);
   static const Color colorsTextWhite = Color(0xFFfafafa);
-  static const Color colorsTextFormField = Color(0xFF9e9e9e);
+  static const Color colorsHintText = Color(0xFF9e9e9e);
+  static const Color colorsTextLabel = Color(0xFF222222);
 
   static const Color colorsIconAppBar = Color(0xFF646465);
   static const Color colorsIconGrey = Color(0xFFcccccc);

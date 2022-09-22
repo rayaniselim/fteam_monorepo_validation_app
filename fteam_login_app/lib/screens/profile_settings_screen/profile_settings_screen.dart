@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fteam_firebase_login_app/screens/profile_settings_screen/components/image_profile_components.dart';
+import 'package:fteam_firebase_login_app/screens/profile_settings_screen/components/image_profile_component.dart';
 import 'package:monorepo_design_system/monorepo_design_system.dart';
-import 'components/text_header_profile_components.dart';
+import 'components/countries_dropdown_component.dart';
+import 'components/text_header_profile_component.dart';
 
 class ProfileSettingsScreen extends StatefulWidget {
   const ProfileSettingsScreen({Key? key}) : super(key: key);
@@ -35,24 +36,15 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
     return Scaffold(
       backgroundColor: AppColors.colorsBackgroundWhite,
       resizeToAvoidBottomInset: true,
-      appBar: AppBar(
-        elevation: 0,
-        leading: InkWell(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: const Icon(
-            Icons.arrow_back_sharp,
-            color: AppColors.colorsIconAppBar,
-            size: 28,
-          ),
-        ),
+      appBar: const PreferredSize(
+        preferredSize: Size(double.infinity, 70),
+        child: CustomAppBar(),
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            const TextHeaderProfileComponents(),
+            const TextHeaderProfileComponent(),
             const ImageProfile(),
             Container(
               decoration: const BoxDecoration(
@@ -79,7 +71,7 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          CustomTextFormFieldComponents(
+                          CustomTextFormFieldComponent(
                             label: 'Display Name',
                             hintText: '  Enter your name',
                             textInputAction: TextInputAction.next,
@@ -97,7 +89,7 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
                           const Padding(
                             padding: EdgeInsets.all(5),
                           ),
-                          CustomTextFormFieldComponents(
+                          CustomTextFormFieldComponent(
                             label: 'CPF',
                             hintText: '  CPF',
                             textInputAction: TextInputAction.next,
@@ -117,7 +109,7 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
                           const Padding(
                             padding: EdgeInsets.all(5),
                           ),
-                          CustomTextFormFieldComponents(
+                          CustomTextFormFieldComponent(
                             label: 'Telephone',
                             hintText: '  Telephone',
                             keyboardType: TextInputType.number,
@@ -135,30 +127,29 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
                             },
                           ),
                           const Padding(
-                            padding: EdgeInsets.all(5),
+                            padding: EdgeInsets.all(10),
                           ),
 
                           /// TODO: dropdown country
-                          CustomTextFormFieldComponents(
-                            label: 'Country',
-                            hintText: '  Country',
-                            textInputAction: TextInputAction.done,
-                            icon: Icons.edit_location_outlined,
-                            onChanged: (value) => _confirmCountry = value,
 
-                            /// TODO: ARRUMAR
-                            // suffixIcon: const Icon(
-                            //   Icons.keyboard_arrow_down_outlined,
-                            //   color: AppColors.primaryColor,
-                            //   size: 24,
-                            // ),
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'This field is required';
-                              }
-                              return null;
-                            },
+                          Container(
+                            // height: 30,
+                            width: 310,
+                            child: Text(
+                              'Country',
+                              textAlign: TextAlign.start,
+                              style: AppFontSize.appFontSizeTextLabel.copyWith(
+                                fontWeight: FontWeight.w600,
+                                color: AppColors.colorsTextLabel,
+                              ),
+                            ),
                           ),
+                          const Padding(
+                            padding: EdgeInsets.all(10),
+                          ),
+
+                          const CountriesDropdownComponent(),
+
                           const SizedBox(
                             height: 40,
                           ),
@@ -167,7 +158,7 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
                             onTap: () {
                               _trySubmitForm();
                             },
-                            child: const BottomComponents(
+                            child: const BottomComponent(
                               textTitle: 'Confirm',
                             ),
                           ),

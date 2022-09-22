@@ -2,16 +2,16 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:monorepo_design_system/monorepo_design_system.dart';
 
-class TextHeaderCadestreComponents extends StatefulWidget {
-  const TextHeaderCadestreComponents({super.key});
+class TextHeaderCadestreComponent extends StatefulWidget {
+  const TextHeaderCadestreComponent({super.key});
 
   @override
-  State<TextHeaderCadestreComponents> createState() =>
-      _TextHeaderCadestreComponentsState();
+  State<TextHeaderCadestreComponent> createState() =>
+      _TextHeaderCadestreComponentState();
 }
 
-class _TextHeaderCadestreComponentsState
-    extends State<TextHeaderCadestreComponents> {
+class _TextHeaderCadestreComponentState
+    extends State<TextHeaderCadestreComponent> {
   @override
   Widget build(BuildContext context) {
     return Container(

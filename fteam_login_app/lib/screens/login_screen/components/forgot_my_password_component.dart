@@ -2,8 +2,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:monorepo_design_system/monorepo_design_system.dart';
 
-class ForgotMyPasswordComponents extends StatelessWidget {
-  const ForgotMyPasswordComponents({super.key});
+class ForgotMyPasswordComponent extends StatelessWidget {
+  const ForgotMyPasswordComponent({super.key});
 
   @override
   Widget build(BuildContext context) {

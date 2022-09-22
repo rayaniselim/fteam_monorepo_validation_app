@@ -36,7 +36,6 @@ class TextFormFieldPassword extends StatefulWidget {
 }
 
 bool isObscure = true;
-// bool isConfirmPasswordObscure = true;
 
 class _TextFormFieldPasswordState extends State<TextFormFieldPassword> {
   @override
@@ -51,18 +50,18 @@ class _TextFormFieldPasswordState extends State<TextFormFieldPassword> {
               padding: const EdgeInsets.fromLTRB(0, 0, 0, 22),
               child: Text(
                 widget.label,
-                // widget.label,
                 style: AppFontSize.appFontSizeTextLabel.copyWith(
                   fontWeight: FontWeight.w600,
+                  color: AppColors.colorsTextLabel,
                 ),
               ),
             ),
             TextFormField(
               obscureText: isObscure,
-              cursorColor: AppColors.colorsTextFormField,
+              cursorColor: AppColors.colorsHintText,
               style: AppFontSize.appFontSizeTextHint.copyWith(
                 fontWeight: FontWeight.normal,
-                color: AppColors.colorsTextFormField,
+                color: AppColors.colorsHintText,
               ),
               keyboardType: TextInputType.name,
               autocorrect: false,
@@ -103,7 +102,7 @@ class _TextFormFieldPasswordState extends State<TextFormFieldPassword> {
                 hintText: widget.hintText,
                 hintStyle: AppFontSize.appFontSizeTextHint.copyWith(
                   fontWeight: FontWeight.normal,
-                  color: AppColors.colorsTextFormField,
+                  color: AppColors.colorsHintText,
                 ),
                 enabledBorder: const OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10.0)),
@@ -132,43 +131,7 @@ class _TextFormFieldPasswordState extends State<TextFormFieldPassword> {
                       BorderSide(color: AppColors.colorsError, width: 1.5),
                 ),
               ),
-              // inputFormatters: widget.inputFormatters, // formatar o texto
             ),
-
-            // CustomTextFormFieldComponents(
-            //   label: 'Confirm Password',
-            //   hintText: '  Confirm Password',
-            //   textInputAction: TextInputAction.done,
-            //   icon: Icons.lock_outline,
-            //   obscureText: isConfirmPasswordObscure,
-            //   onChanged: (value) => _confirmPassword = value,
-            //   suffixIcon: isConfirmPasswordObscure == true
-            //       ? const Icon(
-            //           Icons.visibility_off_outlined,
-            //           color: AppColors.colorsIconGrey,
-            //           size: 24,
-            //         )
-            //       : const Icon(
-            //           Icons.visibility_outlined,
-            //           color: AppColors.colorsIconGrey,
-            //           size: 24,
-            //         ),
-            //   onTapSuffixIcon: () {
-            //     setState(() {
-            //       isConfirmPasswordObscure = !isConfirmPasswordObscure;
-            //     });
-            //   },
-            //   validator: (value) {
-            //     if (value == null || value.isEmpty) {
-            //       return 'This field is required';
-            //     }
-
-            //     if (value != _password) {
-            //       return 'Confimation password does not match the entered password';
-            //     }
-            //     return null;
-            //   },
-            // ),
           ],
         ),
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:monorepo_design_system/monorepo_design_system.dart';
 
 class ScreenFinish extends StatelessWidget {
   const ScreenFinish({super.key});
@@ -6,9 +7,9 @@ class ScreenFinish extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.pink[100],
-        elevation: 0,
+      appBar: const PreferredSize(
+        preferredSize: Size(double.infinity, 70),
+        child: CustomAppBar(),
       ),
       body: Container(
         alignment: Alignment.center,

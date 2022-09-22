@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:monorepo_design_system/monorepo_design_system.dart';
 
-class TextHeaderProfileComponents extends StatefulWidget {
-  const TextHeaderProfileComponents({super.key});
+class TextHeaderProfileComponent extends StatefulWidget {
+  const TextHeaderProfileComponent({super.key});
 
   @override
-  State<TextHeaderProfileComponents> createState() =>
-      _TextHeaderProfileComponentsState();
+  State<TextHeaderProfileComponent> createState() =>
+      _TextHeaderProfileComponentState();
 }
 
-class _TextHeaderProfileComponentsState
-    extends State<TextHeaderProfileComponents> {
+class _TextHeaderProfileComponentState
+    extends State<TextHeaderProfileComponent> {
   @override
   Widget build(BuildContext context) {
     return Container(

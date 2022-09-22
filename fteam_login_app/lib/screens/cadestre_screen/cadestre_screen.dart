@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:monorepo_design_system/monorepo_design_system.dart';
-import 'components/text_header_cadastre_components.dart';
+import 'package:core_module/core_module.dart';
+import 'components/text_header_cadastre_component.dart';
 
 class CadestreScreen extends StatefulWidget {
   const CadestreScreen({super.key});
@@ -36,26 +37,15 @@ class _CadestreScreenState extends State<CadestreScreen> {
     return Scaffold(
       backgroundColor: AppColors.colorsBackgroundGrey,
       resizeToAvoidBottomInset: true,
-      appBar: AppBar(
-        backgroundColor: AppColors.colorsBackgroundGrey,
-        elevation: 0,
-        scrolledUnderElevation: 10,
-        leading: InkWell(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: const Icon(
-            Icons.arrow_back_sharp,
-            color: AppColors.colorsIconAppBar,
-            size: 28,
-          ),
-        ),
+      appBar: const PreferredSize(
+        preferredSize: Size(double.infinity, 70),
+        child: CustomAppBar(),
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            const TextHeaderCadestreComponents(),
+            const TextHeaderCadestreComponent(),
             Container(
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
@@ -81,7 +71,7 @@ class _CadestreScreenState extends State<CadestreScreen> {
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          CustomTextFormFieldComponents(
+                          CustomTextFormFieldComponent(
                             label: 'Full Name',
                             hintText: '  Enter your full name',
                             textInputAction: TextInputAction.next,
@@ -99,7 +89,7 @@ class _CadestreScreenState extends State<CadestreScreen> {
                           const Padding(
                             padding: EdgeInsets.all(5),
                           ),
-                          CustomTextFormFieldComponents(
+                          CustomTextFormFieldComponent(
                             label: 'Email',
                             hintText: '  Email',
                             textInputAction: TextInputAction.next,
@@ -124,15 +114,9 @@ class _CadestreScreenState extends State<CadestreScreen> {
                             label: 'Password',
                             hintText: '  Password',
                             onChanged: (value) => _password = value,
-                            validator: (value) {
-                              if (value == null || value.trim().isEmpty) {
-                                return 'This field is required';
-                              }
-                              if (value.trim().length < 6) {
-                                return 'Password must be at least 6 characters in length';
-                              }
-                              return null;
-                            },
+                            validator: (value) => Validators.passwordValidate(
+                              password: value,
+                            ),
                           ),
                           const Padding(
                             padding: EdgeInsets.all(5),
@@ -141,15 +125,11 @@ class _CadestreScreenState extends State<CadestreScreen> {
                             label: 'Confirm Password',
                             hintText: '  Confirm Password',
                             onChanged: (value) => _confirmPassword = value,
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'This field is required';
-                              }
-                              if (value != _password) {
-                                return 'Confimation password does not match the entered password';
-                              }
-                              return null;
-                            },
+                            validator: (value) =>
+                                Validators.confirmPasswordValidate(
+                              confirmPassword: value,
+                              password: _password,
+                            ),
                           ),
                           const SizedBox(
                             height: 40,
@@ -158,7 +138,7 @@ class _CadestreScreenState extends State<CadestreScreen> {
                             onTap: () {
                               _trySubmitForm();
                             },
-                            child: const BottomComponents(
+                            child: const BottomComponent(
                               textTitle: 'Sign Up',
                             ),
                           ),

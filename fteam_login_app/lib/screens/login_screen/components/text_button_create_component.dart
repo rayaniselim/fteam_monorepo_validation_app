@@ -2,16 +2,15 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:monorepo_design_system/monorepo_design_system.dart';
 
-class TextButtonCreateComponents extends StatefulWidget {
-  const TextButtonCreateComponents({super.key});
+class TextButtonCreateComponent extends StatefulWidget {
+  const TextButtonCreateComponent({super.key});
 
   @override
-  State<TextButtonCreateComponents> createState() =>
-      _TextButtonCreateComponentsState();
+  State<TextButtonCreateComponent> createState() =>
+      _TextButtonCreateComponentState();
 }
 
-class _TextButtonCreateComponentsState
-    extends State<TextButtonCreateComponents> {
+class _TextButtonCreateComponentState extends State<TextButtonCreateComponent> {
   @override
   Widget build(BuildContext context) {
     return Row(
