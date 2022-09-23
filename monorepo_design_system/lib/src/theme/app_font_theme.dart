@@ -35,8 +35,5 @@ class AppFontTheme {
   static TextStyle appTextLogin = const TextStyle(
     fontSize: 15,
     color: AppColors.colorsTextLogin,
-    // fontWeight: FontWeight.bold,
   );
-
-  //    style: AppFontSize.appFontSizeTextButton.copyWith(
 }

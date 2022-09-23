@@ -10,15 +10,11 @@ class AppTheme {
       iconTheme: IconThemeData(color: AppColors.colorsIconAppBar),
     ),
     visualDensity: VisualDensity.adaptivePlatformDensity,
-    iconTheme: const IconThemeData(
-        color: AppColors.primaryColor), // TODO: NAO ESTA SENDO UTILIZADO
+    iconTheme: const IconThemeData(color: AppColors.primaryColor),
     cardColor: AppColors.colorsBackgroundWhite,
     hintColor: AppColors.colorsHintText,
     focusColor: AppColors.primaryColor,
     errorColor: AppColors.colorsError,
-    backgroundColor: AppColors.colorsBackgroundWhite,
+    backgroundColor: AppColors.colorsBackgroundGrey,
   );
-
-  static final themeDark = ThemeData(
-      primaryColor: const Color(0xFF9575CD), brightness: Brightness.dark);
 }

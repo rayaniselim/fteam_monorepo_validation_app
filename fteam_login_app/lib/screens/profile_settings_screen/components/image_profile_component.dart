@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:core_module/core_module.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:monorepo_design_system/monorepo_design_system.dart';
 
 class ImageProfile extends StatefulWidget {
@@ -16,24 +15,22 @@ class _ImageProfileState extends State<ImageProfile> {
   File? image;
 
   Future pickImageCamera() async {
-    try {
-      final image = await ImagePicker().pickImage(source: ImageSource.camera);
-      if (image == null) return;
-      final imageTemporary = File(image.path);
-      setState(() => this.image = imageTemporary);
-    } on PlatformException catch (e) {
-      print('failed to pick image: $e');
+    final imagePicked =
+        await ImagePicker().pickImage(source: ImageSource.camera);
+    if (imagePicked == null) {
+      return;
+    } else {
+      setState(() => image = File(imagePicked.path));
     }
   }
 
   Future pickImageGallery() async {
-    try {
-      final image = await ImagePicker().pickImage(source: ImageSource.gallery);
-      if (image == null) return;
-      final imageTemporary = File(image.path);
-      setState(() => this.image = imageTemporary);
-    } on PlatformException catch (e) {
-      print('failed to pick image: $e');
+    final imagePicked =
+        await ImagePicker().pickImage(source: ImageSource.gallery);
+    if (imagePicked == null) {
+      return;
+    } else {
+      setState(() => image = File(imagePicked.path));
     }
   }
 
@@ -42,43 +39,41 @@ class _ImageProfileState extends State<ImageProfile> {
     return SizedBox(
       height: 96,
       width: 96,
-      child: Expanded(
-        child: Stack(
-          children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: SizedBox(
-                height: 96,
-                width: 96,
-                child: image != null
-                    ? Image.file(
-                        image!,
-                        fit: BoxFit.cover,
-                      )
-                    : Image.asset('assets/image/image.jpeg'),
+      child: Stack(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: SizedBox(
+              height: 96,
+              width: 96,
+              child: image != null
+                  ? Image.file(
+                      image!,
+                      fit: BoxFit.cover,
+                    )
+                  : Image.asset('assets/image/image.jpeg'),
+            ),
+          ),
+          Align(
+            alignment: Alignment.bottomRight,
+            child: Container(
+              height: 34,
+              width: 34,
+              decoration: BoxDecoration(
+                color: Theme.of(context).primaryColor,
+                borderRadius: BorderRadius.circular(25),
+              ),
+              child: IconButton(
+                icon: const Icon(
+                  Icons.camera_alt,
+                  color: AppColors.colorsIconWhite,
+                  size: 18,
+                ),
+                onPressed: () => _onButtonPressed(),
               ),
             ),
-            Align(
-              alignment: Alignment.bottomRight,
-              child: Container(
-                height: 34,
-                width: 34,
-                decoration: BoxDecoration(
-                  color: AppColors.primaryColor,
-                  borderRadius: BorderRadius.circular(25),
-                ),
-                child: IconButton(
-                  icon: const Icon(
-                    Icons.camera_alt,
-                    color: Colors.white,
-                    size: 18,
-                  ),
-                  onPressed: () => _onButtonPressed(),
-                ),
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

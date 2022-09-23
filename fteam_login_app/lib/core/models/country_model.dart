@@ -1,4 +1,4 @@
-class Country {
+class CountryModel {
   final String name;
   final String flag;
   final String code;
@@ -7,7 +7,7 @@ class Country {
   final int minLength;
   final int maxLength;
 
-  Country({
+  CountryModel({
     required this.name,
     required this.flag,
     required this.code,
@@ -30,7 +30,7 @@ class Country {
 }
 
 final List<dynamic> countriesList = [
-  Country(
+  CountryModel(
     name: "Afghanistan",
     flag: "🇦🇫",
     code: "AF",
@@ -38,7 +38,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Åland Islands",
     flag: "🇦🇽",
     code: "AX",
@@ -46,7 +46,7 @@ final List<dynamic> countriesList = [
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  CountryModel(
     name: "Albania",
     flag: "🇦🇱",
     code: "AL",
@@ -54,7 +54,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Algeria",
     flag: "🇩🇿",
     code: "DZ",
@@ -62,7 +62,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "American Samoa",
     flag: "🇦🇸",
     code: "AS",
@@ -70,7 +70,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Andorra",
     flag: "🇦🇩",
     code: "AD",
@@ -78,7 +78,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Angola",
     flag: "🇦🇴",
     code: "AO",
@@ -86,7 +86,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Anguilla",
     flag: "🇦🇮",
     code: "AI",
@@ -94,7 +94,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Antarctica",
     flag: "🇦🇶",
     code: "AQ",
@@ -102,7 +102,7 @@ final List<dynamic> countriesList = [
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  CountryModel(
     name: "Antigua and Barbuda",
     flag: "🇦🇬",
     code: "AG",
@@ -110,7 +110,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Argentina",
     flag: "🇦🇷",
     code: "AR",
@@ -118,7 +118,7 @@ final List<dynamic> countriesList = [
     minLength: 12,
     maxLength: 12,
   ),
-  Country(
+  CountryModel(
     name: "Armenia",
     flag: "🇦🇲",
     code: "AM",
@@ -126,7 +126,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Aruba",
     flag: "🇦🇼",
     code: "AW",
@@ -134,7 +134,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Australia",
     flag: "🇦🇺",
     code: "AU",
@@ -142,7 +142,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Austria",
     flag: "🇦🇹",
     code: "AT",
@@ -150,7 +150,7 @@ final List<dynamic> countriesList = [
     minLength: 13,
     maxLength: 13,
   ),
-  Country(
+  CountryModel(
     name: "Azerbaijan",
     flag: "🇦🇿",
     code: "AZ",
@@ -158,7 +158,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Bahamas",
     flag: "🇧🇸",
     code: "BS",
@@ -166,7 +166,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Bahrain",
     flag: "🇧🇭",
     code: "BH",
@@ -174,7 +174,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Bangladesh",
     flag: "🇧🇩",
     code: "BD",
@@ -182,7 +182,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Barbados",
     flag: "🇧🇧",
     code: "BB",
@@ -190,7 +190,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Belarus",
     flag: "🇧🇾",
     code: "BY",
@@ -198,7 +198,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Belgium",
     flag: "🇧🇪",
     code: "BE",
@@ -206,7 +206,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Belize",
     flag: "🇧🇿",
     code: "BZ",
@@ -214,7 +214,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Benin",
     flag: "🇧🇯",
     code: "BJ",
@@ -222,7 +222,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Bermuda",
     flag: "🇧🇲",
     code: "BM",
@@ -230,7 +230,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Bhutan",
     flag: "🇧🇹",
     code: "BT",
@@ -238,7 +238,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Bolivia",
     flag: "🇧🇴",
     code: "BO",
@@ -246,7 +246,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Bosnia and Herzegovina",
     flag: "🇧🇦",
     code: "BA",
@@ -254,7 +254,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Botswana",
     flag: "🇧🇼",
     code: "BW",
@@ -262,7 +262,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Bouvet Island",
     flag: "🇧🇻",
     code: "BV",
@@ -270,7 +270,7 @@ final List<dynamic> countriesList = [
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  CountryModel(
     name: "Brazil",
     flag: "🇧🇷",
     code: "BR",
@@ -278,7 +278,7 @@ final List<dynamic> countriesList = [
     minLength: 11,
     maxLength: 11,
   ),
-  Country(
+  CountryModel(
     name: "British Indian Ocean Territory",
     flag: "🇮🇴",
     code: "IO",
@@ -286,7 +286,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Brunei Darussalam",
     flag: "🇧🇳",
     code: "BN",
@@ -294,7 +294,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Bulgaria",
     flag: "🇧🇬",
     code: "BG",
@@ -302,7 +302,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Burkina Faso",
     flag: "🇧🇫",
     code: "BF",
@@ -310,7 +310,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Burundi",
     flag: "🇧🇮",
     code: "BI",
@@ -318,7 +318,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Cambodia",
     flag: "🇰🇭",
     code: "KH",
@@ -326,7 +326,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Cameroon",
     flag: "🇨🇲",
     code: "CM",
@@ -334,7 +334,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Campione d'Italia",
     flag: "🇮🇹",
     code: "IT",
@@ -343,7 +343,7 @@ final List<dynamic> countriesList = [
     minLength: 13,
     maxLength: 13,
   ),
-  Country(
+  CountryModel(
     name: "Canada",
     flag: "🇨🇦",
     code: "CA",
@@ -351,7 +351,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Cape Verde",
     flag: "🇨🇻",
     code: "CV",
@@ -359,7 +359,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Cayman Islands",
     flag: "🇰🇾",
     code: "KY",
@@ -367,7 +367,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Central African Republic",
     flag: "🇨🇫",
     code: "CF",
@@ -375,7 +375,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Chad",
     flag: "🇹🇩",
     code: "TD",
@@ -383,7 +383,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Chile",
     flag: "🇨🇱",
     code: "CL",
@@ -391,7 +391,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "China",
     flag: "🇨🇳",
     code: "CN",
@@ -399,7 +399,7 @@ final List<dynamic> countriesList = [
     minLength: 12,
     maxLength: 12,
   ),
-  Country(
+  CountryModel(
     name: "Christmas Island",
     flag: "🇨🇽",
     code: "CX",
@@ -407,7 +407,7 @@ final List<dynamic> countriesList = [
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  CountryModel(
     name: "Cocos (Keeling) Islands",
     flag: "🇨🇨",
     code: "CC",
@@ -415,7 +415,7 @@ final List<dynamic> countriesList = [
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  CountryModel(
     name: "Colombia",
     flag: "🇨🇴",
     code: "CO",
@@ -423,7 +423,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Comoros",
     flag: "🇰🇲",
     code: "KM",
@@ -431,7 +431,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Congo",
     flag: "🇨🇬",
     code: "CG",
@@ -439,7 +439,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Congo, The Democratic Republic of the Congo",
     flag: "🇨🇩",
     code: "CD",
@@ -447,7 +447,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Cook Islands",
     flag: "🇨🇰",
     code: "CK",
@@ -455,7 +455,7 @@ final List<dynamic> countriesList = [
     minLength: 5,
     maxLength: 5,
   ),
-  Country(
+  CountryModel(
     name: "Costa Rica",
     flag: "🇨🇷",
     code: "CR",
@@ -463,7 +463,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Côte d'Ivoire",
     flag: "🇨🇮",
     code: "CI",
@@ -471,7 +471,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Croatia",
     flag: "🇭🇷",
     code: "HR",
@@ -479,7 +479,7 @@ final List<dynamic> countriesList = [
     minLength: 12,
     maxLength: 12,
   ),
-  Country(
+  CountryModel(
     name: "Cuba",
     flag: "🇨🇺",
     code: "CU",
@@ -487,7 +487,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Cyprus",
     flag: "🇨🇾",
     code: "CY",
@@ -495,7 +495,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Czech Republic",
     flag: "🇨🇿",
     code: "CZ",
@@ -503,7 +503,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Denmark",
     flag: "🇩🇰",
     code: "DK",
@@ -511,7 +511,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Djibouti",
     flag: "🇩🇯",
     code: "DJ",
@@ -519,7 +519,7 @@ final List<dynamic> countriesList = [
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  CountryModel(
     name: "Dominica",
     flag: "🇩🇲",
     code: "DM",
@@ -527,7 +527,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Dominican Republic",
     flag: "🇩🇴",
     code: "DO",
@@ -535,7 +535,7 @@ final List<dynamic> countriesList = [
     minLength: 12,
     maxLength: 12,
   ),
-  Country(
+  CountryModel(
     name: "Ecuador",
     flag: "🇪🇨",
     code: "EC",
@@ -543,7 +543,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Egypt",
     flag: "🇪🇬",
     code: "EG",
@@ -551,7 +551,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "El Salvador",
     flag: "🇸🇻",
     code: "SV",
@@ -559,7 +559,7 @@ final List<dynamic> countriesList = [
     minLength: 11,
     maxLength: 11,
   ),
-  Country(
+  CountryModel(
     name: "Equatorial Guinea",
     flag: "🇬🇶",
     code: "GQ",
@@ -567,7 +567,7 @@ final List<dynamic> countriesList = [
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  CountryModel(
     name: "Eritrea",
     flag: "🇪🇷",
     code: "ER",
@@ -575,7 +575,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Estonia",
     flag: "🇪🇪",
     code: "EE",
@@ -583,7 +583,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Ethiopia",
     flag: "🇪🇹",
     code: "ET",
@@ -591,7 +591,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Falkland Islands (Malvinas)",
     flag: "🇫🇰",
     code: "FK",
@@ -599,7 +599,7 @@ final List<dynamic> countriesList = [
     minLength: 5,
     maxLength: 5,
   ),
-  Country(
+  CountryModel(
     name: "Faroe Islands",
     flag: "🇫🇴",
     code: "FO",
@@ -607,7 +607,7 @@ final List<dynamic> countriesList = [
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  CountryModel(
     name: "Fiji",
     flag: "🇫🇯",
     code: "FJ",
@@ -615,7 +615,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Finland",
     flag: "🇫🇮",
     code: "FI",
@@ -623,7 +623,7 @@ final List<dynamic> countriesList = [
     minLength: 12,
     maxLength: 12,
   ),
-  Country(
+  CountryModel(
     name: "France",
     flag: "🇫🇷",
     code: "FR",
@@ -631,7 +631,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "French Guiana",
     flag: "🇬🇫",
     code: "GF",
@@ -639,7 +639,7 @@ final List<dynamic> countriesList = [
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  CountryModel(
     name: "French Polynesia",
     flag: "🇵🇫",
     code: "PF",
@@ -647,7 +647,7 @@ final List<dynamic> countriesList = [
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  CountryModel(
     name: "French Southern Territories",
     flag: "🇹🇫",
     code: "TF",
@@ -655,7 +655,7 @@ final List<dynamic> countriesList = [
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  CountryModel(
     name: "Gabon",
     flag: "🇬🇦",
     code: "GA",
@@ -663,7 +663,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Gambia",
     flag: "🇬🇲",
     code: "GM",
@@ -671,7 +671,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Georgia",
     flag: "🇬🇪",
     code: "GE",
@@ -679,7 +679,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Germany",
     flag: "🇩🇪",
     code: "DE",
@@ -687,7 +687,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 13,
   ),
-  Country(
+  CountryModel(
     name: "Ghana",
     flag: "🇬🇭",
     code: "GH",
@@ -695,7 +695,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Gibraltar",
     flag: "🇬🇮",
     code: "GI",
@@ -703,7 +703,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Greece",
     flag: "🇬🇷",
     code: "GR",
@@ -711,7 +711,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Greenland",
     flag: "🇬🇱",
     code: "GL",
@@ -719,7 +719,7 @@ final List<dynamic> countriesList = [
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  CountryModel(
     name: "Grenada",
     flag: "🇬🇩",
     code: "GD",
@@ -727,7 +727,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Guadeloupe",
     flag: "🇬🇵",
     code: "GP",
@@ -735,7 +735,7 @@ final List<dynamic> countriesList = [
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  CountryModel(
     name: "Guam",
     flag: "🇬🇺",
     code: "GU",
@@ -743,7 +743,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Guatemala",
     flag: "🇬🇹",
     code: "GT",
@@ -751,7 +751,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Guernsey",
     flag: "🇬🇬",
     code: "GG",
@@ -760,7 +760,7 @@ final List<dynamic> countriesList = [
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  CountryModel(
     name: "Guinea",
     flag: "🇬🇳",
     code: "GN",
@@ -768,7 +768,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Guinea-Bissau",
     flag: "🇬🇼",
     code: "GW",
@@ -776,7 +776,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Guyana",
     flag: "🇬🇾",
     code: "GY",
@@ -784,7 +784,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Haiti",
     flag: "🇭🇹",
     code: "HT",
@@ -792,7 +792,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Heard Island and Mcdonald Islands",
     flag: "🇭🇲",
     code: "HM",
@@ -800,7 +800,7 @@ final List<dynamic> countriesList = [
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  CountryModel(
     name: "Holy See (Vatican City State)",
     flag: "🇻🇦",
     code: "VA",
@@ -808,7 +808,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Honduras",
     flag: "🇭🇳",
     code: "HN",
@@ -816,7 +816,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Hong Kong",
     flag: "🇭🇰",
     code: "HK",
@@ -824,7 +824,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Hungary",
     flag: "🇭🇺",
     code: "HU",
@@ -832,7 +832,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Iceland",
     flag: "🇮🇸",
     code: "IS",
@@ -840,7 +840,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "India",
     flag: "🇮🇳",
     code: "IN",
@@ -848,7 +848,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Indonesia",
     flag: "🇮🇩",
     code: "ID",
@@ -856,7 +856,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 13,
   ),
-  Country(
+  CountryModel(
     name: "Iran, Islamic Republic of Persian Gulf",
     flag: "🇮🇷",
     code: "IR",
@@ -864,7 +864,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Iraq",
     flag: "🇮🇶",
     code: "IQ",
@@ -872,7 +872,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Ireland",
     flag: "🇮🇪",
     code: "IE",
@@ -880,7 +880,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Isle of Man",
     flag: "🇮🇲",
     code: "IM",
@@ -889,7 +889,7 @@ final List<dynamic> countriesList = [
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  CountryModel(
     name: "Israel",
     flag: "🇮🇱",
     code: "IL",
@@ -897,7 +897,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Italy",
     flag: "🇮🇹",
     code: "IT",
@@ -905,7 +905,7 @@ final List<dynamic> countriesList = [
     minLength: 13,
     maxLength: 13,
   ),
-  Country(
+  CountryModel(
     name: "Jamaica",
     flag: "🇯🇲",
     code: "JM",
@@ -913,7 +913,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Japan",
     flag: "🇯🇵",
     code: "JP",
@@ -921,7 +921,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Jersey",
     flag: "🇯🇪",
     code: "JE",
@@ -930,7 +930,7 @@ final List<dynamic> countriesList = [
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  CountryModel(
     name: "Jordan",
     flag: "🇯🇴",
     code: "JO",
@@ -938,7 +938,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Kazakhstan",
     flag: "🇰🇿",
     code: "KZ",
@@ -946,7 +946,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Kenya",
     flag: "🇰🇪",
     code: "KE",
@@ -954,7 +954,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Kiribati",
     flag: "🇰🇮",
     code: "KI",
@@ -962,7 +962,7 @@ final List<dynamic> countriesList = [
     minLength: 5,
     maxLength: 5,
   ),
-  Country(
+  CountryModel(
     name: "Korea, Democratic People's Republic of Korea",
     flag: "🇰🇵",
     code: "KP",
@@ -970,7 +970,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Korea, Republic of South Korea",
     flag: "🇰🇷",
     code: "KR",
@@ -978,7 +978,7 @@ final List<dynamic> countriesList = [
     minLength: 11,
     maxLength: 11,
   ),
-  Country(
+  CountryModel(
     name: "Kosovo",
     flag: "🇽🇰",
     code: "XK",
@@ -986,7 +986,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Kuwait",
     flag: "🇰🇼",
     code: "KW",
@@ -994,7 +994,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Kyrgyzstan",
     flag: "🇰🇬",
     code: "KG",
@@ -1002,7 +1002,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Laos",
     flag: "🇱🇦",
     code: "LA",
@@ -1010,7 +1010,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Latvia",
     flag: "🇱🇻",
     code: "LV",
@@ -1018,7 +1018,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Lebanon",
     flag: "🇱🇧",
     code: "LB",
@@ -1026,7 +1026,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Lesotho",
     flag: "🇱🇸",
     code: "LS",
@@ -1034,7 +1034,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Liberia",
     flag: "🇱🇷",
     code: "LR",
@@ -1042,7 +1042,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Libyan Arab Jamahiriya",
     flag: "🇱🇾",
     code: "LY",
@@ -1050,7 +1050,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Liechtenstein",
     flag: "🇱🇮",
     code: "LI",
@@ -1058,7 +1058,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Lithuania",
     flag: "🇱🇹",
     code: "LT",
@@ -1066,7 +1066,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Luxembourg",
     flag: "🇱🇺",
     code: "LU",
@@ -1074,7 +1074,7 @@ final List<dynamic> countriesList = [
     minLength: 11,
     maxLength: 11,
   ),
-  Country(
+  CountryModel(
     name: "Macao",
     flag: "🇲🇴",
     code: "MO",
@@ -1082,7 +1082,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Macedonia",
     flag: "🇲🇰",
     code: "MK",
@@ -1090,7 +1090,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Madagascar",
     flag: "🇲🇬",
     code: "MG",
@@ -1098,7 +1098,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Malawi",
     flag: "🇲🇼",
     code: "MW",
@@ -1106,7 +1106,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Malaysia",
     flag: "🇲🇾",
     code: "MY",
@@ -1114,7 +1114,7 @@ final List<dynamic> countriesList = [
     minLength: 11,
     maxLength: 11,
   ),
-  Country(
+  CountryModel(
     name: "Maldives",
     flag: "🇲🇻",
     code: "MV",
@@ -1122,7 +1122,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Mali",
     flag: "🇲🇱",
     code: "ML",
@@ -1130,7 +1130,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Malta",
     flag: "🇲🇹",
     code: "MT",
@@ -1138,7 +1138,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Marshall Islands",
     flag: "🇲🇭",
     code: "MH",
@@ -1146,7 +1146,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Martinique",
     flag: "🇲🇶",
     code: "MQ",
@@ -1154,7 +1154,7 @@ final List<dynamic> countriesList = [
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  CountryModel(
     name: "Mauritania",
     flag: "🇲🇷",
     code: "MR",
@@ -1162,7 +1162,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Mauritius",
     flag: "🇲🇺",
     code: "MU",
@@ -1170,7 +1170,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Mayotte",
     flag: "🇾🇹",
     code: "YT",
@@ -1178,7 +1178,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Mexico",
     flag: "🇲🇽",
     code: "MX",
@@ -1186,7 +1186,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Micronesia, Federated States of Micronesia",
     flag: "🇫🇲",
     code: "FM",
@@ -1194,7 +1194,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Moldova",
     flag: "🇲🇩",
     code: "MD",
@@ -1202,7 +1202,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Monaco",
     flag: "🇲🇨",
     code: "MC",
@@ -1210,7 +1210,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Mongolia",
     flag: "🇲🇳",
     code: "MN",
@@ -1218,7 +1218,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Montenegro",
     flag: "🇲🇪",
     code: "ME",
@@ -1226,7 +1226,7 @@ final List<dynamic> countriesList = [
     minLength: 12,
     maxLength: 12,
   ),
-  Country(
+  CountryModel(
     name: "Montserrat",
     flag: "🇲🇸",
     code: "MS",
@@ -1234,7 +1234,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Morocco",
     flag: "🇲🇦",
     code: "MA",
@@ -1242,7 +1242,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Mozambique",
     flag: "🇲🇿",
     code: "MZ",
@@ -1250,7 +1250,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Myanmar",
     flag: "🇲🇲",
     code: "MM",
@@ -1258,7 +1258,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Namibia",
     flag: "🇳🇦",
     code: "NA",
@@ -1266,7 +1266,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Nauru",
     flag: "🇳🇷",
     code: "NR",
@@ -1274,7 +1274,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Nepal",
     flag: "🇳🇵",
     code: "NP",
@@ -1282,7 +1282,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Netherlands",
     flag: "🇳🇱",
     code: "NL",
@@ -1290,7 +1290,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Netherlands Antilles",
     flag: "",
     code: "AN",
@@ -1298,7 +1298,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "New Caledonia",
     flag: "🇳🇨",
     code: "NC",
@@ -1306,7 +1306,7 @@ final List<dynamic> countriesList = [
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  CountryModel(
     name: "New Zealand",
     flag: "🇳🇿",
     code: "NZ",
@@ -1314,7 +1314,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Nicaragua",
     flag: "🇳🇮",
     code: "NI",
@@ -1322,7 +1322,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Niger",
     flag: "🇳🇪",
     code: "NE",
@@ -1330,7 +1330,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Nigeria",
     flag: "🇳🇬",
     code: "NG",
@@ -1338,7 +1338,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 11,
   ),
-  Country(
+  CountryModel(
     name: "Niue",
     flag: "🇳🇺",
     code: "NU",
@@ -1346,7 +1346,7 @@ final List<dynamic> countriesList = [
     minLength: 4,
     maxLength: 4,
   ),
-  Country(
+  CountryModel(
     name: "Norfolk Island",
     flag: "🇳🇫",
     code: "NF",
@@ -1354,7 +1354,7 @@ final List<dynamic> countriesList = [
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  CountryModel(
     name: "Northern Mariana Islands",
     flag: "🇲🇵",
     code: "MP",
@@ -1362,7 +1362,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Norway",
     flag: "🇳🇴",
     code: "NO",
@@ -1370,7 +1370,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Oman",
     flag: "🇴🇲",
     code: "OM",
@@ -1378,7 +1378,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Pakistan",
     flag: "🇵🇰",
     code: "PK",
@@ -1386,7 +1386,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Palau",
     flag: "🇵🇼",
     code: "PW",
@@ -1394,7 +1394,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Palestinian Territory, Occupied",
     flag: "🇵🇸",
     code: "PS",
@@ -1402,7 +1402,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Panama",
     flag: "🇵🇦",
     code: "PA",
@@ -1410,7 +1410,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Papua New Guinea",
     flag: "🇵🇬",
     code: "PG",
@@ -1418,7 +1418,7 @@ final List<dynamic> countriesList = [
     minLength: 11,
     maxLength: 11,
   ),
-  Country(
+  CountryModel(
     name: "Paraguay",
     flag: "🇵🇾",
     code: "PY",
@@ -1426,7 +1426,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Peru",
     flag: "🇵🇪",
     code: "PE",
@@ -1434,7 +1434,7 @@ final List<dynamic> countriesList = [
     minLength: 11,
     maxLength: 11,
   ),
-  Country(
+  CountryModel(
     name: "Philippines",
     flag: "🇵🇭",
     code: "PH",
@@ -1442,7 +1442,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Pitcairn",
     flag: "🇵🇳",
     code: "PN",
@@ -1450,7 +1450,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Poland",
     flag: "🇵🇱",
     code: "PL",
@@ -1458,7 +1458,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Portugal",
     flag: "🇵🇹",
     code: "PT",
@@ -1466,7 +1466,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Puerto Rico",
     flag: "🇵🇷",
     code: "PR",
@@ -1474,7 +1474,7 @@ final List<dynamic> countriesList = [
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  CountryModel(
     name: "Qatar",
     flag: "🇶🇦",
     code: "QA",
@@ -1482,7 +1482,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Romania",
     flag: "🇷🇴",
     code: "RO",
@@ -1490,7 +1490,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Russia",
     flag: "🇷🇺",
     code: "RU",
@@ -1498,7 +1498,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Rwanda",
     flag: "🇷🇼",
     code: "RW",
@@ -1506,7 +1506,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Reunion",
     flag: "🇷🇪",
     code: "RE",
@@ -1514,7 +1514,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Saint Barthelemy",
     flag: "🇧🇱",
     code: "BL",
@@ -1522,7 +1522,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Saint Helena, Ascension and Tristan Da Cunha",
     flag: "🇸🇭",
     code: "SH",
@@ -1530,7 +1530,7 @@ final List<dynamic> countriesList = [
     minLength: 4,
     maxLength: 4,
   ),
-  Country(
+  CountryModel(
     name: "Saint Kitts and Nevis",
     flag: "🇰🇳",
     code: "KN",
@@ -1538,7 +1538,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Saint Lucia",
     flag: "🇱🇨",
     code: "LC",
@@ -1546,7 +1546,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Saint Martin",
     flag: "🇲🇫",
     code: "MF",
@@ -1554,7 +1554,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Saint Pierre and Miquelon",
     flag: "🇵🇲",
     code: "PM",
@@ -1562,7 +1562,7 @@ final List<dynamic> countriesList = [
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  CountryModel(
     name: "Saint Vincent and the Grenadines",
     flag: "🇻🇨",
     code: "VC",
@@ -1570,7 +1570,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Samoa",
     flag: "🇼🇸",
     code: "WS",
@@ -1578,7 +1578,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "San Marino",
     flag: "🇸🇲",
     code: "SM",
@@ -1586,7 +1586,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Sao Tome and Principe",
     flag: "🇸🇹",
     code: "ST",
@@ -1594,7 +1594,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Saudi Arabia",
     flag: "🇸🇦",
     code: "SA",
@@ -1602,7 +1602,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Senegal",
     flag: "🇸🇳",
     code: "SN",
@@ -1610,7 +1610,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Serbia",
     flag: "🇷🇸",
     code: "RS",
@@ -1618,7 +1618,7 @@ final List<dynamic> countriesList = [
     minLength: 12,
     maxLength: 12,
   ),
-  Country(
+  CountryModel(
     name: "Seychelles",
     flag: "🇸🇨",
     code: "SC",
@@ -1626,7 +1626,7 @@ final List<dynamic> countriesList = [
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  CountryModel(
     name: "Sierra Leone",
     flag: "🇸🇱",
     code: "SL",
@@ -1634,7 +1634,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Singapore",
     flag: "🇸🇬",
     code: "SG",
@@ -1642,7 +1642,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Slovakia",
     flag: "🇸🇰",
     code: "SK",
@@ -1650,7 +1650,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Slovenia",
     flag: "🇸🇮",
     code: "SI",
@@ -1658,7 +1658,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Solomon Islands",
     flag: "🇸🇧",
     code: "SB",
@@ -1666,7 +1666,7 @@ final List<dynamic> countriesList = [
     minLength: 5,
     maxLength: 5,
   ),
-  Country(
+  CountryModel(
     name: "Somalia",
     flag: "🇸🇴",
     code: "SO",
@@ -1674,7 +1674,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "South Africa",
     flag: "🇿🇦",
     code: "ZA",
@@ -1682,7 +1682,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "South Sudan",
     flag: "🇸🇸",
     code: "SS",
@@ -1690,7 +1690,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "South Georgia and the South Sandwich Islands",
     flag: "🇬🇸",
     code: "GS",
@@ -1698,7 +1698,7 @@ final List<dynamic> countriesList = [
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  CountryModel(
     name: "Spain",
     flag: "🇪🇸",
     code: "ES",
@@ -1706,7 +1706,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Sri Lanka",
     flag: "🇱🇰",
     code: "LK",
@@ -1714,7 +1714,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Sudan",
     flag: "🇸🇩",
     code: "SD",
@@ -1722,7 +1722,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Suriname",
     flag: "🇸🇷",
     code: "SR",
@@ -1730,7 +1730,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Svalbard and Jan Mayen",
     flag: "🇸🇯",
     code: "SJ",
@@ -1738,7 +1738,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Eswatini",
     flag: "🇸🇿",
     code: "SZ",
@@ -1746,7 +1746,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Sweden",
     flag: "🇸🇪",
     code: "SE",
@@ -1754,7 +1754,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 13,
   ),
-  Country(
+  CountryModel(
     name: "Switzerland",
     flag: "🇨🇭",
     code: "CH",
@@ -1762,7 +1762,7 @@ final List<dynamic> countriesList = [
     minLength: 12,
     maxLength: 12,
   ),
-  Country(
+  CountryModel(
     name: "Syrian Arab Republic",
     flag: "🇸🇾",
     code: "SY",
@@ -1770,7 +1770,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Taiwan",
     flag: "🇹🇼",
     code: "TW",
@@ -1778,7 +1778,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Tajikistan",
     flag: "🇹🇯",
     code: "TJ",
@@ -1786,7 +1786,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Tanzania, United Republic of Tanzania",
     flag: "🇹🇿",
     code: "TZ",
@@ -1794,7 +1794,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Thailand",
     flag: "🇹🇭",
     code: "TH",
@@ -1802,7 +1802,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Timor-Leste",
     flag: "🇹🇱",
     code: "TL",
@@ -1810,7 +1810,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Togo",
     flag: "🇹🇬",
     code: "TG",
@@ -1818,7 +1818,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Tokelau",
     flag: "🇹🇰",
     code: "TK",
@@ -1826,7 +1826,7 @@ final List<dynamic> countriesList = [
     minLength: 4,
     maxLength: 4,
   ),
-  Country(
+  CountryModel(
     name: "Tonga",
     flag: "🇹🇴",
     code: "TO",
@@ -1834,7 +1834,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Trinidad and Tobago",
     flag: "🇹🇹",
     code: "TT",
@@ -1842,7 +1842,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Tunisia",
     flag: "🇹🇳",
     code: "TN",
@@ -1850,7 +1850,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Turkey",
     flag: "🇹🇷",
     code: "TR",
@@ -1858,7 +1858,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Turkmenistan",
     flag: "🇹🇲",
     code: "TM",
@@ -1866,7 +1866,7 @@ final List<dynamic> countriesList = [
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  CountryModel(
     name: "Turks and Caicos Islands",
     flag: "🇹🇨",
     code: "TC",
@@ -1874,7 +1874,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Tuvalu",
     flag: "🇹🇻",
     code: "TV",
@@ -1882,7 +1882,7 @@ final List<dynamic> countriesList = [
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  CountryModel(
     name: "Uganda",
     flag: "🇺🇬",
     code: "UG",
@@ -1890,7 +1890,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Ukraine",
     flag: "🇺🇦",
     code: "UA",
@@ -1898,7 +1898,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "United Arab Emirates",
     flag: "🇦🇪",
     code: "AE",
@@ -1906,7 +1906,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "United Kingdom",
     flag: "🇬🇧",
     code: "GB",
@@ -1914,7 +1914,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "United States",
     flag: "🇺🇸",
     code: "US",
@@ -1922,7 +1922,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Uruguay",
     flag: "🇺🇾",
     code: "UY",
@@ -1930,7 +1930,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Uzbekistan",
     flag: "🇺🇿",
     code: "UZ",
@@ -1938,7 +1938,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Vanuatu",
     flag: "🇻🇺",
     code: "VU",
@@ -1946,7 +1946,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Venezuela, Bolivarian Republic of Venezuela",
     flag: "🇻🇪",
     code: "VE",
@@ -1954,7 +1954,7 @@ final List<dynamic> countriesList = [
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  CountryModel(
     name: "Vietnam",
     flag: "🇻🇳",
     code: "VN",
@@ -1962,7 +1962,7 @@ final List<dynamic> countriesList = [
     minLength: 11,
     maxLength: 11,
   ),
-  Country(
+  CountryModel(
     name: "Virgin Islands, British",
     flag: "🇻🇬",
     code: "VG",
@@ -1970,7 +1970,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Virgin Islands, U.S.",
     flag: "🇻🇮",
     code: "VI",
@@ -1978,7 +1978,7 @@ final List<dynamic> countriesList = [
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  CountryModel(
     name: "Wallis and Futuna",
     flag: "🇼🇫",
     code: "WF",
@@ -1986,7 +1986,7 @@ final List<dynamic> countriesList = [
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  CountryModel(
     name: "Yemen",
     flag: "🇾🇪",
     code: "YE",
@@ -1994,7 +1994,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Zambia",
     flag: "🇿🇲",
     code: "ZM",
@@ -2002,7 +2002,7 @@ final List<dynamic> countriesList = [
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  CountryModel(
     name: "Zimbabwe",
     flag: "🇿🇼",
     code: "ZW",

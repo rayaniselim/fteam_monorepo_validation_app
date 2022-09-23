@@ -8,21 +8,16 @@ class ScreenFinish extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PreferredSize(
-        preferredSize: Size(double.infinity, 70),
+        preferredSize: Size(double.infinity, 52),
         child: CustomAppBar(),
       ),
       body: Container(
         alignment: Alignment.center,
-        decoration: BoxDecoration(
-          color: Colors.pink[100],
-        ),
-        // height: 400,
-        // width: 400,
-        child: Text(
+        decoration: const BoxDecoration(),
+        child: const Text(
           ' finish !',
           style: TextStyle(
             fontSize: 30,
-            color: Colors.grey[800],
             fontWeight: FontWeight.w600,
             fontStyle: FontStyle.italic,
           ),

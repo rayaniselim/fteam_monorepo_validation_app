@@ -31,13 +31,11 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.colorsBackgroundWhite,
       resizeToAvoidBottomInset: true,
       body: Center(
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Card(
-            color: Colors.transparent,
             elevation: 0,
             child: Padding(
               padding: const EdgeInsets.only(
@@ -51,10 +49,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    const Padding(
-                      padding: EdgeInsets.all(5),
-                    ),
+                    const SizedBox(height: 16),
                     CustomTextFormFieldComponent(
+                      initialValue: 'rayani@user.com',
                       label: 'Email',
                       hintText: '  Email',
                       textInputAction: TextInputAction.next,
@@ -78,7 +75,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     const Padding(
                       padding: EdgeInsets.all(5),
                     ),
-                    TextFormFieldPassword(
+                    CustomTextFormFieldPassword(
+                      initialValue: '123456',
                       label: 'Password',
                       hintText: '  Password',
                       onChanged: (value) => _password = value,
@@ -100,7 +98,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: ForgotMyPasswordComponent(),
                     ),
                     const SizedBox(height: 40),
-                    BottomComponent(
+                    CustomButtonComponent(
                       onTap: () {
                         _trySubmitForm();
                       },

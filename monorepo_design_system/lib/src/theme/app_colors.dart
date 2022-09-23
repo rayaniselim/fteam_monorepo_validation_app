@@ -13,8 +13,9 @@ class AppColors {
 
   static const Color colorsIconAppBar = Color(0xFF646465);
   static const Color colorsIconGrey = Color(0xFFcccccc);
+  static const Color colorsIconWhite = Color(0xFFffffff);
 
-  static const Color colorsBackgroundGrey = Color(0xFFfafafa);
+  static const Color colorsBackgroundGrey = Color(0xFFF3F3F3);
   static const Color colorsBackgroundWhite = Color(0xFFffffff);
 
   static const Color colorsAppBar = Color(0xFFfafafa);

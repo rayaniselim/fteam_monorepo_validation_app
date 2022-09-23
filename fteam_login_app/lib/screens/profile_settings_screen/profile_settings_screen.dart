@@ -32,10 +32,10 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.colorsBackgroundWhite,
+      backgroundColor: AppColors.colorsBackgroundGrey,
       resizeToAvoidBottomInset: true,
       appBar: const PreferredSize(
-        preferredSize: Size(double.infinity, 70),
+        preferredSize: Size(double.infinity, 52),
         child: CustomAppBar(),
       ),
       body: SingleChildScrollView(
@@ -44,116 +44,118 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
         child: Column(
           children: [
             const TextHeaderProfileComponent(),
-            const ImageProfile(),
-            Container(
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
-                ),
-                color: AppColors.colorsBackgroundWhite,
-              ),
-              alignment: Alignment.bottomCenter,
-              child: Center(
-                child: Card(
-                  color: Colors.transparent,
-                  elevation: 0,
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                      left: 25,
-                      top: 29,
-                      right: 25,
-                      bottom: 0,
-                    ),
-                    child: Form(
-                      key: _formKey,
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          CustomTextFormFieldComponent(
-                            label: 'Display Name',
-                            hintText: '  Enter your name',
-                            textInputAction: TextInputAction.next,
-                            icon: Icons.person_outline,
-                            onChanged: (value) => _userName = value,
-                            validator: (value) {
-                              if (value!.isEmpty ||
-                                  !RegExp('[a-z A-Z]').hasMatch(value)) {
-                                return 'Enter correct name';
-                              } else {
-                                return null;
-                              }
-                            },
+            CustomCardComponent(
+              child: Column(
+                children: [
+                  const SizedBox(
+                    height: 32,
+                  ),
+                  const ImageProfile(),
+                  Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Center(
+                      child: Card(
+                        elevation: 0,
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                            left: 25,
+                            top: 29,
+                            right: 25,
+                            bottom: 0,
                           ),
-                          const Padding(
-                            padding: EdgeInsets.all(5),
-                          ),
-                          CustomTextFormFieldComponent(
-                            label: 'CPF',
-                            hintText: '  CPF',
-                            textInputAction: TextInputAction.next,
-                            keyboardType: TextInputType.number,
-                            icon: Icons.mode_edit_outline_outlined,
-                            onChanged: (value) => _userEmail = value,
-                            validator: (value) {
-                              if (value!.isEmpty ||
-                                  !RegExp("[0-9]{3}[.]\\?[0-9]{3}[.]\\?[0-9]{3}[-]\\?[0-9]{2}")
-                                      .hasMatch(value)) {
-                                return 'Enter correct cpf';
-                              } else {
-                                return null;
-                              }
-                            },
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.all(5),
-                          ),
-                          CustomTextFormFieldComponent(
-                            label: 'Telephone',
-                            hintText: '  Telephone',
-                            keyboardType: TextInputType.number,
-                            textInputAction: TextInputAction.next,
-                            icon: Icons.phone,
-                            onChanged: (value) => _telephone = value,
-                            validator: (value) {
-                              if (value == null || value.trim().isEmpty) {
-                                return 'This field is required';
-                              }
-                              if (value.trim().length < 10) {
-                                return 'Fill in your phone correctly';
-                              }
-                              return null;
-                            },
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.all(5),
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.only(
-                              left: 4,
-                              right: 4,
-                              top: 0,
-                              bottom: 0,
+                          child: Form(
+                            key: _formKey,
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                CustomTextFormFieldComponent(
+                                  label: 'Display Name',
+                                  hintText: '  Enter your name',
+                                  textInputAction: TextInputAction.next,
+                                  icon: Icons.person_outline,
+                                  onChanged: (value) => _userName = value,
+                                  validator: (value) {
+                                    if (value!.isEmpty ||
+                                        !RegExp('[a-z A-Z]{10}')
+                                            .hasMatch(value)) {
+                                      return 'Enter correct name';
+                                    } else {
+                                      return null;
+                                    }
+                                  },
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.all(5),
+                                ),
+                                CustomTextFormFieldComponent(
+                                  label: 'CPF',
+                                  hintText: '  CPF',
+                                  textInputAction: TextInputAction.next,
+                                  keyboardType: TextInputType.number,
+                                  icon: Icons.mode_edit_outline_outlined,
+                                  onChanged: (value) => _userEmail = value,
+                                  validator: (value) {
+                                    if (value!.isEmpty ||
+                                        !RegExp("[0-9]{3}[.]?[0-9]{3}[.]?[0-9]{3}[-]?[0-9]{2}")
+                                            .hasMatch(value)) {
+                                      return 'Enter correct cpf';
+                                    } else {
+                                      return null;
+                                    }
+                                  },
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.all(5),
+                                ),
+                                CustomTextFormFieldComponent(
+                                  label: 'Telephone',
+                                  hintText: '  Telephone',
+                                  keyboardType: TextInputType.number,
+                                  textInputAction: TextInputAction.next,
+                                  icon: Icons.phone,
+                                  onChanged: (value) => _telephone = value,
+                                  validator: (value) {
+                                    if (value == null || value.trim().isEmpty) {
+                                      return 'This field is required';
+                                    }
+                                    if (value.trim().length < 11) {
+                                      return 'Fill in your phone correctly';
+                                    }
+                                    return null;
+                                  },
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.all(5),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 4,
+                                    right: 4,
+                                    top: 0,
+                                    bottom: 0,
+                                  ),
+                                  child: CountriesDropdownComponent(),
+                                ),
+                                const SizedBox(
+                                  height: 60,
+                                ),
+                                CustomButtonComponent(
+                                  onTap: () {
+                                    _trySubmitForm();
+                                  },
+                                  textTitle: 'Confirm',
+                                ),
+                                const SizedBox(
+                                  height: 30,
+                                ),
+                              ],
                             ),
-                            child: CountriesDropdownComponent(),
                           ),
-                          const SizedBox(
-                            height: 40,
-                          ),
-                          BottomComponent(
-                            onTap: () {
-                              _trySubmitForm();
-                            },
-                            textTitle: 'Confirm',
-                          ),
-                          const SizedBox(
-                            height: 30,
-                          ),
-                        ],
+                        ),
                       ),
                     ),
                   ),
-                ),
+                ],
               ),
             ),
           ],

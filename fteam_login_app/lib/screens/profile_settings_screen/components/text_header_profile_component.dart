@@ -14,12 +14,13 @@ class _TextHeaderProfileComponentState
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppColors.colorsBackgroundGrey,
+      color: Theme.of(context).appBarTheme.backgroundColor,
       child: Padding(
         padding: const EdgeInsets.only(
+          top: 32,
           left: 24,
           right: 24,
-          bottom: 34,
+          bottom: 32,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:monorepo_design_system/monorepo_design_system.dart';
-import 'country_list_component.dart';
+
+import '../../../core/models/country_model.dart';
 
 class CountriesDropdownComponent extends StatelessWidget {
   const CountriesDropdownComponent({super.key});
@@ -18,7 +19,7 @@ class CountriesDropdownComponent extends StatelessWidget {
         ),
         DropdownButtonFormField(
           isExpanded: true,
-          dropdownColor: AppColors.colorsBackgroundWhite,
+          dropdownColor: Theme.of(context).scaffoldBackgroundColor,
           borderRadius: BorderRadius.circular(10),
           menuMaxHeight: 300,
           hint: Text(
@@ -28,7 +29,7 @@ class CountriesDropdownComponent extends StatelessWidget {
           icon: const Icon(
             Icons.keyboard_arrow_down_outlined,
             size: 24,
-            color: AppColors.colorsIconGrey,
+            color: AppColors.colorsIconGrey, // TODO: COLOR
           ),
           onChanged: (countrySelected) => {},
           items: countriesList.map((country) {
@@ -40,42 +41,45 @@ class CountriesDropdownComponent extends StatelessWidget {
               ),
             );
           }).toList(),
-          decoration: const InputDecoration(
+          decoration: InputDecoration(
             prefixIcon: Icon(
               Icons.location_on_outlined,
-              color: AppColors.primaryColor,
+              color: Theme.of(context).primaryColor,
               size: 24,
             ),
-            contentPadding: EdgeInsets.only(
+            contentPadding: const EdgeInsets.only(
               right: 0,
               top: 13,
               left: 12,
               bottom: 13,
             ),
             enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(10.0)),
+              borderRadius: const BorderRadius.all(Radius.circular(10.0)),
               borderSide: BorderSide(
-                color: AppColors.primaryColor,
+                color: Theme.of(context).primaryColor,
                 width: 0.5,
               ),
             ),
             focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(10.0)),
+              borderRadius: const BorderRadius.all(Radius.circular(10.0)),
               borderSide: BorderSide(
-                color: AppColors.primaryColor,
+                color: Theme.of(context).primaryColor,
                 width: 1.5,
               ),
             ),
             errorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(10.0)),
+              borderRadius: const BorderRadius.all(Radius.circular(10.0)),
               borderSide: BorderSide(
-                color: AppColors.colorsError,
+                color: Theme.of(context).errorColor,
                 width: 1,
               ),
             ),
             focusedErrorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(10.0)),
-              borderSide: BorderSide(color: AppColors.colorsError, width: 1.5),
+              borderRadius: const BorderRadius.all(Radius.circular(10.0)),
+              borderSide: BorderSide(
+                color: Theme.of(context).errorColor,
+                width: 1.5,
+              ),
             ),
           ),
           validator: (value) {

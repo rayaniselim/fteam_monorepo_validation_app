@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:monorepo_design_system/monorepo_design_system.dart';
 
-class CustomTextFormFieldComponent extends StatefulWidget {
+class CustomTextFormFieldComponent extends StatelessWidget {
   final Icon? prefixIcon;
+  final String? initialValue;
   final IconData? icon;
   final TextInputAction? textInputAction;
   final EdgeInsetsGeometry? contentPadding;
@@ -22,6 +23,7 @@ class CustomTextFormFieldComponent extends StatefulWidget {
   const CustomTextFormFieldComponent({
     super.key,
     this.prefixIcon,
+    this.initialValue,
     this.icon,
     required this.textInputAction,
     this.contentPadding,
@@ -39,15 +41,6 @@ class CustomTextFormFieldComponent extends StatefulWidget {
   });
 
   @override
-  State<CustomTextFormFieldComponent> createState() =>
-      _CustomTextFormFieldComponentState();
-}
-
-class _CustomTextFormFieldComponentState
-    extends State<CustomTextFormFieldComponent> {
-  bool focused = false;
-
-  @override
   Widget build(BuildContext context) {
     return Center(
       child: Card(
@@ -58,24 +51,25 @@ class _CustomTextFormFieldComponentState
             Padding(
               padding: const EdgeInsets.fromLTRB(0, 0, 0, 22),
               child: Text(
-                widget.label,
+                label,
                 style: AppFontTheme.appTextLabel,
               ),
             ),
             TextFormField(
+              initialValue: initialValue ?? '',
               textCapitalization: TextCapitalization.words, // letra maiuscula
               cursorColor: AppColors.colorsHintText,
               style: AppFontTheme.appTextHint,
               keyboardType: TextInputType.name,
               autocorrect: false,
-              validator: (value) => widget.validator!(value!),
+              validator: (value) => validator!(value!),
               onChanged: (value) {
-                widget.onChanged(value);
+                onChanged(value);
               },
-              textInputAction: widget.textInputAction,
+              textInputAction: textInputAction,
               maxLines: 1,
               decoration: InputDecoration(
-                contentPadding: widget.contentPadding ??
+                contentPadding: contentPadding ??
                     const EdgeInsets.only(
                       top: 16,
                       left: 16,
@@ -83,40 +77,41 @@ class _CustomTextFormFieldComponentState
                       bottom: 16,
                     ),
                 prefixIcon: Icon(
-                  widget.icon,
-                  color: AppColors.primaryColor,
+                  icon,
+                  color: Theme.of(context).iconTheme.color,
                   size: 24,
                 ),
-                hintText: widget.hintText,
+                hintText: hintText,
                 hintStyle: AppFontTheme.appTextHint,
-                enabledBorder: const OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: const BorderRadius.all(Radius.circular(10.0)),
                   borderSide: BorderSide(
-                    color: AppColors.primaryColor,
+                    color: Theme.of(context).primaryColor,
                     width: 0.5,
                   ),
                 ),
-                focusedBorder: const OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: const BorderRadius.all(Radius.circular(10.0)),
                   borderSide: BorderSide(
-                    color: AppColors.primaryColor,
+                    color: Theme.of(context).primaryColor,
                     width: 1.5,
                   ),
                 ),
-                errorBorder: const OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                errorBorder: OutlineInputBorder(
+                  borderRadius: const BorderRadius.all(Radius.circular(10.0)),
                   borderSide: BorderSide(
-                    color: AppColors.colorsError,
+                    color: Theme.of(context).errorColor,
                     width: 1,
                   ),
                 ),
-                focusedErrorBorder: const OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                  borderSide:
-                      BorderSide(color: AppColors.colorsError, width: 1.5),
+                focusedErrorBorder: OutlineInputBorder(
+                  borderRadius: const BorderRadius.all(Radius.circular(10.0)),
+                  borderSide: BorderSide(
+                    color: Theme.of(context).errorColor,
+                    width: 1.5,
+                  ),
                 ),
               ),
-              // inputFormatters: widget.inputFormatters, // formatar o texto
             ),
           ],
         ),

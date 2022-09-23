@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:monorepo_design_system/monorepo_design_system.dart';
 
-class TextFormFieldPassword extends StatefulWidget {
+class CustomTextFormFieldPassword extends StatefulWidget {
   final String label;
+  final String? initialValue;
   final String hintText;
   final IconData? icon;
   final bool? obscureText;
@@ -15,9 +16,10 @@ class TextFormFieldPassword extends StatefulWidget {
   final Icon? suffixIcon;
   final void Function()? onTapSuffixIcon;
 
-  const TextFormFieldPassword({
+  const CustomTextFormFieldPassword({
     super.key,
     required this.label,
+    this.initialValue,
     required this.hintText,
     this.icon,
     this.obscureText,
@@ -32,12 +34,13 @@ class TextFormFieldPassword extends StatefulWidget {
   });
 
   @override
-  State<TextFormFieldPassword> createState() => _TextFormFieldPasswordState();
+  State<CustomTextFormFieldPassword> createState() =>
+      _CustomTextFormFieldPasswordState();
 }
 
-bool isObscure = true;
-
-class _TextFormFieldPasswordState extends State<TextFormFieldPassword> {
+class _CustomTextFormFieldPasswordState
+    extends State<CustomTextFormFieldPassword> {
+  bool isObscure = true;
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -46,14 +49,15 @@ class _TextFormFieldPasswordState extends State<TextFormFieldPassword> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 0, 22),
-              child: Text(
-                widget.label,
-                style: AppFontTheme.appTextLabel,
-              ),
+            Text(
+              widget.label,
+              style: AppFontTheme.appTextLabel,
+            ),
+            const SizedBox(
+              height: 22,
             ),
             TextFormField(
+              initialValue: widget.initialValue ?? '',
               obscureText: isObscure,
               cursorColor: AppColors.colorsHintText,
               style: AppFontTheme.appTextHint,
@@ -70,9 +74,9 @@ class _TextFormFieldPasswordState extends State<TextFormFieldPassword> {
                   right: 0,
                   bottom: 16,
                 ),
-                prefixIcon: const Icon(
+                prefixIcon: Icon(
                   Icons.lock_outline,
-                  color: AppColors.primaryColor,
+                  color: Theme.of(context).primaryColor,
                   size: 24,
                 ),
                 suffixIcon: GestureDetector(
@@ -95,31 +99,33 @@ class _TextFormFieldPasswordState extends State<TextFormFieldPassword> {
                 ),
                 hintText: widget.hintText,
                 hintStyle: AppFontTheme.appTextHint,
-                enabledBorder: const OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: const BorderRadius.all(Radius.circular(10.0)),
                   borderSide: BorderSide(
-                    color: AppColors.primaryColor,
+                    color: Theme.of(context).primaryColor,
                     width: 0.5,
                   ),
                 ),
-                focusedBorder: const OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: const BorderRadius.all(Radius.circular(10.0)),
                   borderSide: BorderSide(
-                    color: AppColors.primaryColor,
+                    color: Theme.of(context).primaryColor,
                     width: 1.5,
                   ),
                 ),
-                errorBorder: const OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                errorBorder: OutlineInputBorder(
+                  borderRadius: const BorderRadius.all(Radius.circular(10.0)),
                   borderSide: BorderSide(
-                    color: AppColors.colorsError,
+                    color: Theme.of(context).errorColor,
                     width: 1,
                   ),
                 ),
-                focusedErrorBorder: const OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                  borderSide:
-                      BorderSide(color: AppColors.colorsError, width: 1.5),
+                focusedErrorBorder: OutlineInputBorder(
+                  borderRadius: const BorderRadius.all(Radius.circular(10.0)),
+                  borderSide: BorderSide(
+                    color: Theme.of(context).errorColor,
+                    width: 1.5,
+                  ),
                 ),
               ),
             ),

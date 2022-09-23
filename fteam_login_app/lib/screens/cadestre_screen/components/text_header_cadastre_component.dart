@@ -18,10 +18,10 @@ class _TextHeaderCadestreComponentState
       color: AppColors.colorsBackgroundGrey,
       child: Padding(
         padding: const EdgeInsets.only(
+          top: 32,
           left: 24,
-          top: 8,
           right: 24,
-          bottom: 34,
+          bottom: 32,
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -63,7 +63,7 @@ class _TextHeaderCadestreComponentState
                           TextSpan(
                             text: 'Login',
                             style: AppFontTheme.appTextHeaderSubtitle.copyWith(
-                              fontWeight: FontWeight.w600,
+                              fontWeight: FontWeight.w500,
                             ),
                             recognizer: TapGestureRecognizer()
                               ..onTap = () => {
