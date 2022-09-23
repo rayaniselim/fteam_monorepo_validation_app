@@ -36,10 +36,7 @@ class _TextHeaderCadestreComponentState
                     Text(
                       ' 👋 Hello,',
                       maxLines: 2,
-                      style: AppFontSize.appFontSizeTextTitleHeader.copyWith(
-                        color: AppColors.colorsTextBold,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: AppFontTheme.appTextTitleHeader,
                       textAlign: TextAlign.start,
                     ),
                   ],
@@ -51,10 +48,7 @@ class _TextHeaderCadestreComponentState
                   'Are you new here?',
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: AppFontSize.appFontSizeTextTitleHeader.copyWith(
-                    color: AppColors.colorsTextBold,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: AppFontTheme.appTextTitleHeader,
                   textAlign: TextAlign.start,
                 ),
                 const SizedBox(height: 10),
@@ -64,17 +58,12 @@ class _TextHeaderCadestreComponentState
                       TextSpan(
                         children: [
                           TextSpan(
-                            text: 'if you have an account /',
-                            style: AppFontSize.appFontSizeTextHeaderSubtitle
-                                .copyWith(
-                              color: AppColors.colorsTextGreyHeader,
-                            ),
-                          ),
+                              text: 'if you have an account /',
+                              style: AppFontTheme.appTextHeaderSubtitle),
                           TextSpan(
                             text: 'Login',
-                            style: AppFontSize.appFontSizeTextHeaderSubtitle
-                                .copyWith(
-                              color: AppColors.colorsTextLogin,
+                            style: AppFontTheme.appTextHeaderSubtitle.copyWith(
+                              fontWeight: FontWeight.w600,
                             ),
                             recognizer: TapGestureRecognizer()
                               ..onTap = () => {

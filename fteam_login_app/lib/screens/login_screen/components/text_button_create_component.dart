@@ -21,15 +21,13 @@ class _TextButtonCreateComponentState extends State<TextButtonCreateComponent> {
             children: [
               TextSpan(
                 text: "if you don't have an account /",
-                style: AppFontSize.appFontSizeTextLogin.copyWith(
+                style: AppFontTheme.appTextLogin.copyWith(
                   color: AppColors.colorsTextGreyHeader,
                 ),
               ),
               TextSpan(
                 text: ' Create',
-                style: AppFontSize.appFontSizeTextLogin.copyWith(
-                  color: AppColors.colorsTextLogin,
-                ),
+                style: AppFontTheme.appTextLogin,
                 recognizer: TapGestureRecognizer()
                   ..onTap = () {
                     Navigator.pushNamed(context, '/cadestre');

@@ -134,13 +134,11 @@ class _CadestreScreenState extends State<CadestreScreen> {
                           const SizedBox(
                             height: 40,
                           ),
-                          InkWell(
+                          BottomComponent(
                             onTap: () {
                               _trySubmitForm();
                             },
-                            child: const BottomComponent(
-                              textTitle: 'Sign Up',
-                            ),
+                            textTitle: 'Sign Up',
                           ),
                           const SizedBox(
                             height: 30,

@@ -100,13 +100,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: ForgotMyPasswordComponent(),
                     ),
                     const SizedBox(height: 40),
-                    InkWell(
+                    BottomComponent(
                       onTap: () {
                         _trySubmitForm();
                       },
-                      child: const BottomComponent(
-                        textTitle: 'Sign Up',
-                      ),
+                      textTitle: 'Sign Up',
                     ),
                     const SizedBox(height: 10),
                     const TextButtonCreateComponent(),

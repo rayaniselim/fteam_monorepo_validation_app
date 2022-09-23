@@ -50,19 +50,13 @@ class _TextFormFieldPasswordState extends State<TextFormFieldPassword> {
               padding: const EdgeInsets.fromLTRB(0, 0, 0, 22),
               child: Text(
                 widget.label,
-                style: AppFontSize.appFontSizeTextLabel.copyWith(
-                  fontWeight: FontWeight.w600,
-                  color: AppColors.colorsTextLabel,
-                ),
+                style: AppFontTheme.appTextLabel,
               ),
             ),
             TextFormField(
               obscureText: isObscure,
               cursorColor: AppColors.colorsHintText,
-              style: AppFontSize.appFontSizeTextHint.copyWith(
-                fontWeight: FontWeight.normal,
-                color: AppColors.colorsHintText,
-              ),
+              style: AppFontTheme.appTextHint,
               keyboardType: TextInputType.name,
               autocorrect: false,
               validator: (value) => widget.validator!(value!),
@@ -100,10 +94,7 @@ class _TextFormFieldPasswordState extends State<TextFormFieldPassword> {
                   },
                 ),
                 hintText: widget.hintText,
-                hintStyle: AppFontSize.appFontSizeTextHint.copyWith(
-                  fontWeight: FontWeight.normal,
-                  color: AppColors.colorsHintText,
-                ),
+                hintStyle: AppFontTheme.appTextHint,
                 enabledBorder: const OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10.0)),
                   borderSide: BorderSide(

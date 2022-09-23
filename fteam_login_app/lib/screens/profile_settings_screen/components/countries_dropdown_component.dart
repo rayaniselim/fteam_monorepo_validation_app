@@ -13,9 +13,7 @@ class CountriesDropdownComponent extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 22),
           child: Text(
             'Country',
-            style: AppFontSize.appFontSizeTextLabel.copyWith(
-              fontWeight: FontWeight.w600,
-            ),
+            style: AppFontTheme.appTextLabel,
           ),
         ),
         DropdownButtonFormField(
@@ -25,9 +23,7 @@ class CountriesDropdownComponent extends StatelessWidget {
           menuMaxHeight: 300,
           hint: Text(
             'Selecte the country',
-            style: AppFontSize.appFontSizeTextHint.copyWith(
-              color: AppColors.colorsHintText,
-            ),
+            style: AppFontTheme.appTextHint,
           ),
           icon: const Icon(
             Icons.keyboard_arrow_down_outlined,
@@ -40,10 +36,7 @@ class CountriesDropdownComponent extends StatelessWidget {
               value: country,
               child: Text(
                 '${country.flag} ${country.name}',
-                style: AppFontSize.appFontSizeTextHint.copyWith(
-                  fontWeight: FontWeight.normal,
-                  color: AppColors.colorsHintText,
-                ),
+                style: AppFontTheme.appTextHint,
               ),
             );
           }).toList(),

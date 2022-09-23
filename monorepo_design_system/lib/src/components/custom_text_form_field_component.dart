@@ -59,18 +59,13 @@ class _CustomTextFormFieldComponentState
               padding: const EdgeInsets.fromLTRB(0, 0, 0, 22),
               child: Text(
                 widget.label,
-                style: AppFontSize.appFontSizeTextLabel.copyWith(
-                  fontWeight: FontWeight.w600,
-                ),
+                style: AppFontTheme.appTextLabel,
               ),
             ),
             TextFormField(
               textCapitalization: TextCapitalization.words, // letra maiuscula
               cursorColor: AppColors.colorsHintText,
-              style: AppFontSize.appFontSizeTextHint.copyWith(
-                fontWeight: FontWeight.normal,
-                color: AppColors.colorsHintText,
-              ),
+              style: AppFontTheme.appTextHint,
               keyboardType: TextInputType.name,
               autocorrect: false,
               validator: (value) => widget.validator!(value!),
@@ -93,10 +88,7 @@ class _CustomTextFormFieldComponentState
                   size: 24,
                 ),
                 hintText: widget.hintText,
-                hintStyle: AppFontSize.appFontSizeTextHint.copyWith(
-                  fontWeight: FontWeight.normal,
-                  color: AppColors.colorsHintText,
-                ),
+                hintStyle: AppFontTheme.appTextHint,
                 enabledBorder: const OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10.0)),
                   borderSide: BorderSide(

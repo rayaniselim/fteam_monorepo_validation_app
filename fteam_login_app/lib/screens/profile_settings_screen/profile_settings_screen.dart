@@ -17,7 +17,6 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
   String _userEmail = '';
   String _userName = '';
   String _telephone = '';
-  String _confirmCountry = '';
 
   void _trySubmitForm() {
     final bool? isValid = _formKey.currentState?.validate();
@@ -26,7 +25,6 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
       debugPrint(_userEmail);
       debugPrint(_userName);
       debugPrint(_telephone);
-      debugPrint(_confirmCountry);
       Navigator.pushNamed(context, '/finish');
     }
   }
@@ -41,6 +39,7 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
         child: CustomAppBar(),
       ),
       body: SingleChildScrollView(
+        physics: const ClampingScrollPhysics(),
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
@@ -141,13 +140,11 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
                           const SizedBox(
                             height: 40,
                           ),
-                          InkWell(
+                          BottomComponent(
                             onTap: () {
                               _trySubmitForm();
                             },
-                            child: const BottomComponent(
-                              textTitle: 'Confirm',
-                            ),
+                            textTitle: 'Confirm',
                           ),
                           const SizedBox(
                             height: 30,

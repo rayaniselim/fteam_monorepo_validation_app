@@ -28,9 +28,7 @@ class _TextHeaderProfileComponentState
               children: [
                 Text(
                   ' 😎 Setting up your',
-                  style: AppFontSize.appFontSizeTextTitleHeader.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: AppFontTheme.appTextTitleHeader,
                   textAlign: TextAlign.start,
                 ),
               ],
@@ -42,9 +40,7 @@ class _TextHeaderProfileComponentState
               ' profile',
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: AppFontSize.appFontSizeTextTitleHeader.copyWith(
-                fontWeight: FontWeight.bold,
-              ),
+              style: AppFontTheme.appTextTitleHeader,
               textAlign: TextAlign.start,
             ),
             const SizedBox(height: 20),
@@ -55,10 +51,7 @@ class _TextHeaderProfileComponentState
                     children: [
                       TextSpan(
                         text: 'Add your profile photo',
-                        style:
-                            AppFontSize.appFontSizeTextHeaderSubtitle.copyWith(
-                          color: AppColors.colorsTextGreyHeader,
-                        ),
+                        style: AppFontTheme.appTextHeaderSubtitle,
                       ),
                     ],
                   ),

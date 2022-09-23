@@ -4,7 +4,7 @@ class AppColors {
 // static - nao precisa instanciar
   static const Color primaryColor = Color(0xFF918ae2);
 
-  static const Color colorsTextBold = Color(0xFF5f5e5f);
+  static const Color colorsTextBold = Color(0xFF2f2e2f);
   static const Color colorsTextGreyHeader = Color(0xFFc5c5c5);
   static const Color colorsTextLogin = Color(0xFFa1a1a1);
   static const Color colorsTextWhite = Color(0xFFfafafa);

@@ -3,27 +3,28 @@ import 'package:flutter/material.dart';
 import 'package:monorepo_design_system/monorepo_design_system.dart';
 
 class ForgotMyPasswordComponent extends StatelessWidget {
-  const ForgotMyPasswordComponent({super.key});
+  final void Function()? onTap;
+  const ForgotMyPasswordComponent({super.key, this.onTap});
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text.rich(
-          TextSpan(
-            text: 'forgot my password',
-            style: AppFontSize.appFontSizeTextLogin.copyWith(
-              fontSize: 14,
-              color: AppColors.colorsTextLogin,
+    return InkWell(
+      onTap: onTap,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text.rich(
+            TextSpan(
+              text: 'forgot my password',
+              style: AppFontTheme.appTextLogin,
+              recognizer: TapGestureRecognizer()
+                ..onTap = () {
+                  Navigator.pushNamed(context, '/finish');
+                },
             ),
-            recognizer: TapGestureRecognizer()
-              ..onTap = () {
-                Navigator.pushNamed(context, '/finish');
-              },
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
