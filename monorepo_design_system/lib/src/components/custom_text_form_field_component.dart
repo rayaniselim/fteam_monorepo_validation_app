@@ -13,8 +13,6 @@ class CustomTextFormFieldComponent extends StatelessWidget {
   final void Function(String) onChanged;
   final TextInputType? keyboardType;
   final List<TextInputFormatter>? inputFormatters;
-  final int? maxLines;
-  final int? maxLength;
   final String? Function(String?)? validator;
   final void Function()? onTapSuffixIcon;
   final String label;
@@ -32,8 +30,6 @@ class CustomTextFormFieldComponent extends StatelessWidget {
     required this.onChanged,
     this.keyboardType,
     this.inputFormatters,
-    this.maxLines,
-    this.maxLength,
     required this.validator,
     this.onTapSuffixIcon,
     required this.label,

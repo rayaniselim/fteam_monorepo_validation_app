@@ -29,7 +29,7 @@ class CountriesDropdownComponent extends StatelessWidget {
           icon: const Icon(
             Icons.keyboard_arrow_down_outlined,
             size: 24,
-            color: AppColors.colorsIconGrey, // TODO: COLOR
+            color: AppColors.colorsIconGrey,
           ),
           onChanged: (countrySelected) => {},
           items: countriesList.map((country) {
