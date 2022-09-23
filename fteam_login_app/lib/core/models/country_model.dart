@@ -25,7 +25,7 @@ class CountryModel {
   }
 }
 
-final List<dynamic> countriesList = [
+final List<CountryModel> countriesList = [
   CountryModel(
     name: "Afghanistan",
     flag: "🇦🇫",

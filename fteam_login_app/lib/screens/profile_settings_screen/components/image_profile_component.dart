@@ -14,7 +14,7 @@ class ImageProfile extends StatefulWidget {
 class _ImageProfileState extends State<ImageProfile> {
   File? image;
 
-  Future pickImageCamera() async {
+  Future<void> pickImageCamera() async {
     final imagePicked =
         await ImagePicker().pickImage(source: ImageSource.camera);
     if (imagePicked == null) {
@@ -24,7 +24,7 @@ class _ImageProfileState extends State<ImageProfile> {
     }
   }
 
-  Future pickImageGallery() async {
+  Future<void> pickImageGallery() async {
     final imagePicked =
         await ImagePicker().pickImage(source: ImageSource.gallery);
     if (imagePicked == null) {
@@ -51,7 +51,9 @@ class _ImageProfileState extends State<ImageProfile> {
                       image!,
                       fit: BoxFit.cover,
                     )
-                  : Image.asset('assets/image/image.jpeg'),
+                  : Image.asset(
+                      'assets/image/image.jpeg',
+                    ),
             ),
           ),
           Align(
@@ -84,6 +86,7 @@ class _ImageProfileState extends State<ImageProfile> {
       context: context,
       builder: (context) {
         return Container(
+          // stateles
           height: 115,
           color: const Color(0xFF737373),
           child: Container(
