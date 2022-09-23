@@ -3,8 +3,6 @@ import 'package:monorepo_design_system/monorepo_design_system.dart';
 import 'components/forgot_my_password_component.dart';
 import 'components/text_button_create_component.dart';
 
-final formKey = GlobalKey<FormState>();
-
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -13,6 +11,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final formKey = GlobalKey<FormState>();
+
   String _userEmail = '';
   String _password = '';
 

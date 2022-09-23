@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:fteam_firebase_login_app/screens/profile_settings_screen/components/image_profile_component.dart';
 import 'package:monorepo_design_system/monorepo_design_system.dart';
 import 'components/countries_dropdown_component.dart';
-import 'components/text_header_profile_component.dart';
 
 class ProfileSettingsScreen extends StatefulWidget {
   const ProfileSettingsScreen({Key? key}) : super(key: key);
@@ -43,7 +42,10 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            const TextHeaderProfileComponent(),
+            const CustomHeaderComponent(
+              subtitle: 'Add you profile photo',
+              title: '😎 Setting up your\nprofile',
+            ),
             CustomCardComponent(
               child: Column(
                 children: [

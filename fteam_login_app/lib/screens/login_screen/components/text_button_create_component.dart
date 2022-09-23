@@ -30,7 +30,7 @@ class _TextButtonCreateComponentState extends State<TextButtonCreateComponent> {
                 ),
                 recognizer: TapGestureRecognizer()
                   ..onTap = () {
-                    Navigator.pushNamed(context, '/cadestre');
+                    Navigator.pushNamed(context, '/signup');
                   },
               ),
             ],

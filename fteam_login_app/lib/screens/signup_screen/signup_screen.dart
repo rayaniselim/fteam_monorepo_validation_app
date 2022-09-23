@@ -1,16 +1,16 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:monorepo_design_system/monorepo_design_system.dart';
 import 'package:core_module/core_module.dart';
-import 'components/text_header_cadastre_component.dart';
 
-class CadestreScreen extends StatefulWidget {
-  const CadestreScreen({super.key});
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key});
 
   @override
-  State<CadestreScreen> createState() => _CadestreScreenState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _CadestreScreenState extends State<CadestreScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   final _formKey = GlobalKey<FormState>();
 
   String _userEmail = '';
@@ -45,7 +45,15 @@ class _CadestreScreenState extends State<CadestreScreen> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const TextHeaderCadestreComponent(),
+            CustomHeaderComponent(
+              title: '👋 Hello,\nAre you new here?',
+              subtitle: 'If you have an account ',
+              textAction: '/Login',
+              recognizer: TapGestureRecognizer()
+                ..onTap = () => {
+                      Navigator.pushNamed(context, '/login'),
+                    },
+            ),
             CustomCardComponent(
               child: Padding(
                 padding: const EdgeInsets.only(
