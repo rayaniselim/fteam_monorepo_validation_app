@@ -1,16 +1,16 @@
 # fteam_firebase_login_app
+Desafio #2 - Fteam
 
-A new Flutter project.
+Reproduçao da tela
+https://assets.materialup.com/uploads/e1470cb6-ecaf-46fb-9114-8d0956d58d6b/preview.png
 
-## Getting Started
+Telas: Registro, Perfil e Login
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Navegação
+Responsividade
+Theme - Design System em monorepo
+Validação:
+    Regex em todos os campos(qual a validação, a sua escolha)
+    Adicionar campo de CPF e Telefone na tela de perfil
+    Obrigatorio selecionar um pais e uma foto
+Pegar imagem do dispositivo - Package
